@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMULADOR FINANCEIRO</title>
+</head>
+<body>
+    <h1>Simulador Soja</h1><br><br><br>
+
+    Quilograma de soja <input id="in_kg"><br>
+    Selecione o estado para o serviço 
+    
+    <select name="" id="sel_estado">
+        <option value="">- select -</option>
+        <option value="sp">São Paulo</option>
+        <option value="ms">Mato Grosso do Sul</option>
+        <option value="pr">Paraná</option>
+        <option value="mt">Mato grosso</option>
+        <option value="go">Goiás</option>
+        <option value="sc">Santa Catarina</option>
+        <option value="rs">Rio Grande do Sul</option>
+        <option value="mg">Minas Gerais</option>
+        <option value="ba">Bahia</option>
+
+    </select>
+
+    <p>Ao clicar em verificar, aparecerá o valor total e a estimativa de perda em reais da soja em seu armazenamento</p>
+    <button onclick="verificar()">Verificar</button>
+    
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        
+        var preco = (Number(in_kg.value) * 1.54) 
+        var estado = sel_estado.value
+
+        if (estado == "sp") {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 14% resultando em R$${(preco * 0.86).toFixed(02)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.14).toFixed(2)} `
+        } else if (estado == "ms") {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 16% resultando em R$${(preco * 0.84).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.16).toFixed(2)} `
+        } else if (estado == "pr") {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 18% resultando em R$${(preco * 0.82).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.18).toFixed(2)} `
+        } else if (estado == "mt") {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 14% resultando em R$${(preco * 0.86).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.14).toFixed(2)} `
+        } else if (estado == "go") {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 21% resultando em R$${(preco * 0.79).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.21).toFixed(2)} `
+        } else if (estado == "rs") {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 14% resultando em R$${(preco * 0.86).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.14).toFixed(2)} `
+        } else if (estado ==  "mg" ) {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 11% resultando em R$${(preco * 0.89).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.11).toFixed(2)} `
+        } else {
+            mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>
+        A estimativa de perda é de 13% resultando em R$${(preco * 0.87).toFixed(2)}.<br> 
+        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.13).toFixed(2)} `
+        }
+
+        div_mensagem.innerHTML = mensagem
+
+    }
+</script>
