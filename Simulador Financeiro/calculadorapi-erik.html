@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Site-Institucional/site-sojatech.css">
+    <link rel="stylesheet" href="calculadora.css">
     <title>SIMULADOR FINANCEIRO</title>
 </head>
 <body>
-    <h1>Simulador Soja</h1><br><br><br>
+    <div class="header">
+        <div class="container">
+            <h1><a href="../Site-Institucional/site-sojatech.html">SOJATECH</a></h1>
+            <div class="navbar">
+                <ul>
+                    <li></li>
+                    <button>Quem somos</button>
+                    <li></li>
+                    <button><a href="../Site-Institucional/Simulador Financeiro/calculadorapi-erik.html" id="simule">Simule</a></button>
+                    <li></li>
+                    <button>Login</button>
+                    <li></li>
+                    <button>Cadastro</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <div class="container">
+            <div class="simuladorBOX">
+                <div class="simuladorC">
+                    <h1>Simulador Soja</h1><br><br><br>
 
     Quilograma de soja <input id="in_kg"><br>
     Selecione o estado para o serviço 
@@ -25,11 +50,16 @@
         <option value="ba">Bahia</option>
 
     </select>
+    
 
-    <p>Ao clicar em verificar, aparecerá o valor total e a estimativa de perda em reais da soja em seu armazenamento</p>
-    <button onclick="verificar()">Verificar</button>
+    <!-- <p>Ao clicar em verificar, aparecerá o valor total e a estimativa de perda em reais da soja em seu armazenamento</p>
+    <button onclick="verificar()">Verificar</button> -->
     
     <div id="div_mensagem"></div>
+</div>
+</div>
+</div>
+    </div>
 </body>
 </html>
 <script>
