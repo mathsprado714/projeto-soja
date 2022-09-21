@@ -1,11 +1,11 @@
 create database soja; 
 use soja;
 
+drop table users;
 
-		drop table users;
         
 create table users(
-	idUsers int primary key auto_increment,
+	idUser int primary key auto_increment,
     nome varchar(45),
     email varchar(60),
 	constraint chk01email check (email not like '%[^a-z0-9@._-]%'),
@@ -69,15 +69,31 @@ select * from users where nome like '%a%';
 select * from users where nome like '%o';
 select * from users where nome like '%a_';
 
-alter table sensores add column fkUsers int;
-alter table sensores add foreign key (fkUsers) references users(idUsers);
-update sensores set fkUsers = 101 where idSensor = 102;
-Update sensores set fkUsers = 102 where idSensor = 101;
+alter table sensores add column fkUser int;
+alter table sensores add foreign key (fkUser) references users(idUser);
 
-select * from ;
+select * from users;
+select * from sensores;
+update sensores set fkUser = 101 where idSensor = 102;
+Update sensores set fkUser = 102 where idSensor = 101;
+update sensores set fkUser = 107 where idSensor = 109;
+update sensores set fkUser = 102 where idSensor = 106;
+update sensores set fkUser = 103 where idSensor = 105;
+update sensores set fkUser = 105 where idSensor = 104;
+update sensores set fkUser = 104 where idSensor = 103;
+update sensores set fkUser = 106 where idSensor = 107;
+update sensores set fkUser = 107 where idSensor = 108;
 
 select * from sensores join users
-	on fkUsers = idUsers;
+	on fkUsers = idUser;
     
 select * from sensores left join users
-	on fkUsers = idUsers;
+	on fkUsers = idUser;
+    
+desc users;
+desc sensores;
+
+select u.nome as Unome, s.galpaoSilo
+	as galpao, s.temperatura, s.umidade, s.situacao
+		from users as u join sensores as s on u.idUser = s.fkUser;
+        
