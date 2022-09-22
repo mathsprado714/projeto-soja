@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     color: #FFFFFF;
-    font-family: sans-serif;
+    font-family: 'Poppins',sans-serif;
+    background-size: cover;
 }
 
 .header {
@@ -63,7 +64,7 @@ li {
 .banner {
     background-image: url("./WhatsApp\ Image\ 2022-09-20\ at\ 21.03.31.jpeg");
     background-size: cover;
-    padding: 100px 0;
+    padding: 260px 0;
     
 }
 
@@ -118,4 +119,15 @@ a{
     color: #fff;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer{
+    padding: 45px 0;
+    background-color: #383c42;
+}
+footer p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }

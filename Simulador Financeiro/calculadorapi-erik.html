@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Site-Institucional/site-sojatech.css">
     <link rel="stylesheet" href="calculadora.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3550ee625.js" crossorigin="anonymous" defer></script>
+    
     <title>SIMULADOR FINANCEIRO</title>
 </head>
 <body>
@@ -37,7 +42,7 @@
     Quilograma de soja <input id="in_kg"><br>
     Selecione o estado para o serviço 
     
-    <select name="" id="sel_estado">
+    <select id="sel_estado" onchange="verificar()">
         <option value="">- select -</option>
         <option value="sp">São Paulo</option>
         <option value="ms">Mato Grosso do Sul</option>
@@ -50,16 +55,17 @@
         <option value="ba">Bahia</option>
 
     </select>
-    
+    <div id="div_mensagem" class="div_mensagem"></div>
 
     <!-- <p>Ao clicar em verificar, aparecerá o valor total e a estimativa de perda em reais da soja em seu armazenamento</p>
     <button onclick="verificar()">Verificar</button> -->
-    
-    <div id="div_mensagem"></div>
 </div>
 </div>
 </div>
     </div>
+    <footer>
+        <p>Desenvolvido por alunos SPTECH - &copy; Copyright</p>
+    </footer>
 </body>
 </html>
 <script>
@@ -67,6 +73,7 @@
         
         var preco = (Number(in_kg.value) * 1.54) 
         var estado = sel_estado.value
+        var mensagem = ''
 
         if (estado == "sp") {
             mensagem = `O valor do seu quilograma de soja equivale a R$${preco}.<br>

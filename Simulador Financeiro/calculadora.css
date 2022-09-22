@@ -18,3 +18,26 @@ h1{
     align-items: center;
     justify-content: center;
 }
+
+#in_kg{
+    color: black;
+    margin-top: 12px;
+}
+
+#sel_estado {
+    color: black;
+    margin-top: 12px;
+}
+
+#sel_estado option{
+    color: black;
+}
+
+.div_mensagem{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
