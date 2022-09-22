@@ -92,8 +92,4 @@ select * from sensores left join users
     
 desc users;
 desc sensores;
-
-select u.nome as Unome, s.galpaoSilo
-	as galpao, s.temperatura, s.umidade, s.situacao
-		from users as u join sensores as s on u.idUser = s.fkUser;
-        
+select*from users;
