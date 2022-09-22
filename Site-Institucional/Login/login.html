@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../site-sojatech.css">
+    <script src="./script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3550ee625.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1><a href="../site-sojatech.html">SOJATECH</a></h1>
+            <div class="navbar">
+                <ul>
+                    <li></li>
+                    <button>Quem somos</button>
+                    <li></li>
+                    <button><a href="../../Simulador Financeiro/calculadorapi-erik.html">Simule</a></button>
+                    <li></li>
+                    <button><a href="./login.html">Login</a></button>
+                    <li></li>
+                    <button>Cadastro</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+<main>
+<form>
+<section class="inputs-container"><br>
+    <h2>Login</h2><br>
+<input type="email" placeholder="example@gmail.com" >
+
+<div class="password-container">
+<input type="password" id="field-password" class="field-password" placeholder="********">
+<i class="fa-solid fa-eye" id="eye" onclick="showPassword()"></i>
+<i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
+</div>
+</section>
+
+<section class="password-infos">
+<div>
+    <input type="checkbox">
+    <span>Lembrar senha?</span>
+</div>
+<a href="#">Esqueceu sua senha?</a>
+</section>
+<button id="btn-logar">Logar</button>
+    <footer>
+<hr>
+<span>Ainda não tem uma conta?<a href="#">Cadastre-se</a></span>
+    </footer>
+
+</form>
+</main>
+</body>
+</html>
