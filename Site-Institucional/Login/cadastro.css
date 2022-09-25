@@ -68,10 +68,10 @@ main {
 }
 
 main form {
-  margin-top: 10px;
-  margin-bottom: 20px;
+    margin-top: 10px;
+  margin-bottom: 10px;
   width: 35%;
-  height: 75vh;
+  height: 85vh;
   background-color: #383c42;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4) inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 18px;
@@ -84,9 +84,7 @@ main form {
 }
 
 main form .inputs-container {
-    margin-top: 10%;
-    width: 100%;
-
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,18 +118,6 @@ main form .password-container {
     align-items: center;
 }
 
-main form .password-container i {
-    position: absolute;
-    right: 8%;
-    top: 35%;
-    color: #7777;
-    cursor: pointer;
-}
-
-main form .password-container #eye{
-    display: none;
-}
-
 main form .password-infos{
     width: 90%;
     margin-top: 2%;
@@ -156,7 +142,6 @@ main form button{
     border: 0;
     outline: 0;
     border-radius: 12px;
-    margin-top: 10%;
     font-size: 1.6em;
     font-weight: 600;
     cursor: pointer;
@@ -171,6 +156,7 @@ main form button:hover {
 
 main form footer{
     width: 100%;
+    margin-top: 10%;
 
     display: flex;
     flex-direction: column;
