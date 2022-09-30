@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-right: 400px;
+    margin-left: 45px;
+
 }
 
 .caixaM h1 {
@@ -21,6 +24,8 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    margin-left: 400px;
+    margin-right: 45px;
 }
 
 .caixaVI h1 {
@@ -35,6 +40,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin-right: 400px;
+    margin-left: 45px;
 }
 
 .caixaVA h1 {
@@ -55,14 +62,17 @@
 .txtM h2{
 
     color: black;
+    display: flex;
 }
 
 .txtVI h2{
 
     color: black;
+    display: flex;
 }
 
 .txtVA h2{
 
     color: black;
+    display: flex;
 }
