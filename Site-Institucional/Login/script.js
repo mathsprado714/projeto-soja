@@ -18,3 +18,8 @@ document.getElementById('btn-logar').addEventListener('click', function(e) {
     e.preventDefault()
     alert('Logado!')
 })
+
+document.getElementsByClassName('header').addEventListener("scroll", function(){
+    var header = document.querySelector("header")
+    header.classList.toggle("dash",window.scrollY > 100)
+})

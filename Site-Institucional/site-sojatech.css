@@ -6,10 +6,21 @@
     background-size: cover;
 }
 
-.header {
+header {
+    position: fixed;
     padding: 15px;
+    display: flex;
     border-bottom: 3px solid #75D390;
-    background-color: #383c42;
+    background-color: #383c4241;
+}
+
+.dash {
+    width: 100%;    
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #75D390;
+    background-color: #383c4241;
 }
 
 .container {

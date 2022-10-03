@@ -22,7 +22,7 @@
     border-radius: 50px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
     margin-left: 400px;
     margin-right: 45px;
@@ -49,16 +49,38 @@
     margin-bottom: 10px;
 }
 
-.banner{
+.banner1{
     background-image: url('https://blog.jacto.com.br/wp-content/uploads/2017/08/produ%C3%A7%C3%A3o-de-soja.jpg');
     background-repeat: no-repeat;
-    height: auto;
+    height: 600px;
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 10px solid #75D390;
 }   
 
+.banner2{
+    background-image: url('https://tecnologianocampo.com.br/wp-content/uploads/2018/12/agriultura-de-precis%C3%A3o.jpg');
+    background-repeat: no-repeat;
+    height: 600px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #75D390;
+}  
+
+.banner3{
+    background-image: url('https://portaladama.com/wp-content/uploads/2020/08/Guia-da-Soja-capa-1.jpeg');
+    background-repeat: no-repeat;
+    height: 600px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #75D390;
+}  
 .txtM h2{
 
     color: black;
