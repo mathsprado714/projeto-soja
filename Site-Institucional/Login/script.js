@@ -19,6 +19,8 @@ document.getElementById('btn-logar').addEventListener('click', function(e) {
     alert('Logado!')
 })
 
+
+// Function para "substituir" o css de uma tag por outra mas ao mesmo tempo "manter"
 document.getElementsByClassName('header').addEventListener("scroll", function(){
     var header = document.querySelector("header")
     header.classList.toggle("dash",window.scrollY > 100)

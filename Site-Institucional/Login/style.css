@@ -57,8 +57,9 @@ padding: 0.7em;
 }
     
 main {
+    padding: 100px;
+    height: 100%;
     width: 100%;
-    min-width: 100% ;
     background-image: url(./Guia-da-Soja-capa-1.jpeg);
 
     display: flex;
@@ -171,7 +172,6 @@ main form button:hover {
 
 main form footer{
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,7 +185,7 @@ main form footer hr{
 main form footer span{
     font-weight: 400;
     font-size: 0.9em;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 main form footer a{
@@ -195,4 +195,16 @@ main form footer a{
 
 main form footer a:hover{
   color: #18acfe ;  
+}
+
+footer{
+    height: 80px;
+    padding: 30px ;
+    background-color: #383c42;
+}
+footer p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }

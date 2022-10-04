@@ -59,7 +59,7 @@ padding: 0.7em;
 
 main {
     width: 100%;
-    min-width: 100% ;;
+    min-width: 100% ;
     display: flex;
     justify-content: center;
 
@@ -67,7 +67,6 @@ main {
 }
 
 .banner{
-    background-image: url('./Minecraft-Wallpapers-HD-4K-Photos-Minecraft-Desktop-and-.jpg');
     background-repeat: no-repeat;
     background-size: 100.5% 150%;
     height: 300px;
