@@ -62,8 +62,10 @@ button {
 }
 
 button:hover{
-    background-color: #FFFFFF;
+    background-color: #ffffff79;
     color: #75D390;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 li {
