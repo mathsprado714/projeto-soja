@@ -27,6 +27,7 @@ h1{
 #sel_estado {
     color: black;
     margin-top: 12px;
+    margin-bottom: 20px;
 }
 
 #sel_estado option{
