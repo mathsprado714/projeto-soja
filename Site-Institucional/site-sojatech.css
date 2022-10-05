@@ -32,6 +32,10 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.banner .container p{
+    font-size: 70px;
+}
+
 h1 {
     color: #FFFFFF;
     font-weight: 600;
@@ -81,15 +85,6 @@ li {
 
 .banner .container {
     height: 350px;
-    align-items: center;
-    justify-content: center;
-}
-
-.banner p {
-    width: 280px;
-    color: #FFFFFF;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
     align-items: center;
     justify-content: center;
 }

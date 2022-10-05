@@ -58,12 +58,17 @@
     </select>
 
     <button onclick="verificar()" style="height:30px; width: 150px;">Calcular perdas</button>
-    <div id="div_mensagem" class="div_mensagem"></div>
-
+    </div>
     <!-- <p>Ao clicar em verificar, aparecerá o valor total e a estimativa de perda em reais da soja em seu armazenamento</p>
     <button onclick="verificar()">Verificar</button> -->
 </div>
+
+
+<div id="resultado" style="margin-left: 50px; background-color: #383c42;padding: 200px;border-radius: 10px;flex-direction: column; align-items: center;justify-content: center;display: none;">
+    <div id="div_mensagem" class="div_mensagem">
 </div>
+</div>
+
 </div>
     </div>
     <footer>
@@ -73,6 +78,7 @@
 </html>
 <script>
     function verificar(){
+        resultado.style.display = 'inherit'
         
         var preco = (Number(in_kg.value) * 1.54) 
         var estado = sel_estado.value

@@ -5,7 +5,7 @@ h1{
 
 .simuladorBOX{
     background-color: #383c42;
-    padding: 50px 50px;
+    padding: 80px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -33,11 +33,4 @@ h1{
     color: black;
 }
 
-.div_mensagem{
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
+
