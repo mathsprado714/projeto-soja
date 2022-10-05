@@ -2,6 +2,18 @@ h1{
     color: #75d390;
 } 
 
+.banner {
+    background-image: url("../Site-Institucional/WhatsApp\ Image\ 2022-09-20\ at\ 21.03.31.jpeg");
+    background-size: cover;
+    padding: 280px 0;
+    
+}
+
+.banner .container {
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+}
 
 .simuladorBOX{
     background-color: #383c42;
@@ -27,11 +39,16 @@ h1{
 #sel_estado {
     color: black;
     margin-top: 12px;
-    margin-bottom: 20px;
 }
 
 #sel_estado option{
     color: black;
 }
+
+.div_mensagem{
+    font-size: 20px;
+}
+
+
 
 
