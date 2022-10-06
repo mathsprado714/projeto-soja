@@ -10,7 +10,7 @@ header {
     padding: 15px;
     border-bottom: 3px solid #75D390;
     background-color: rgb(255, 123, 0);
-    min-height: 8vh;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;

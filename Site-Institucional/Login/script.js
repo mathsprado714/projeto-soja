@@ -25,3 +25,12 @@ document.getElementsByClassName('header').addEventListener("scroll", function(){
     var header = document.querySelector("header")
     header.classList.toggle("dash",window.scrollY > 100)
 })
+
+
+function alterar(){
+   var main = document.getElementById('main')
+   var main2 = document.getElementById('main2')
+
+    main.style.display = 'none'
+    main2.style.display ='inherit'
+}
