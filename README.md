@@ -1,7 +1,7 @@
 # projeto-soja;
-#Site-Institucional: 65%;
-#Banco-Dados: 70%;
-#Simulador-Financeiro: 95%;
+#Site-Institucional: 95%;
+#Banco-Dados: 85%;
+#Simulador-Financeiro: 99%;
 
 #Regras de conduta do projeto da equipe:
 Para criar um ambiente de trabalho saudável e que seja agradável para todos
