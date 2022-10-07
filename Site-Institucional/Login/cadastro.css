@@ -37,8 +37,10 @@ header button{
     transition-delay: 0ms;
 }
 header button:hover{
-    background-color: #fff;
-    color: #000000;
+    background-color: #ffffff79;
+    color: #75D390;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 h1{
