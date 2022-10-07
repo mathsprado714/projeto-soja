@@ -10,7 +10,7 @@ header {
     padding: 15px;
     border-bottom: 3px solid #75D390;
     background-color: rgb(255, 123, 0);
-    min-height: 8vh;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,8 +37,10 @@ header button{
     transition-delay: 0ms;
 }
 header button:hover{
-    background-color: #fff;
-    color: #000000;
+    background-color: #ffffff79;
+    color: #75D390;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 h1{
