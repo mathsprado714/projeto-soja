@@ -65,7 +65,7 @@
 
 <!-- Aqui foi usado o css na propria tag "resultado" onde o display ficou: display:none; para assim ele ficar invisivel, assim quando for chamado na function ele aparece com a
 tag resultado.style.display = 'inherit'-->
-<div id="resultado" style="margin-left: 50px; background-color: #383c42;padding: 200px;border-radius: 10px;flex-direction: column; align-items: center;justify-content: center;display: none;">
+<div id="resultado" style="margin-left: 50px; background-color: #383c42;padding: 130px;border-radius: 10px;flex-direction: column; align-items: center;justify-content: center;display: none;">
     <div id="div_mensagem" class="div_mensagem">
 </div>
 </div>
@@ -83,42 +83,64 @@ tag resultado.style.display = 'inherit'-->
         // Tag para deixar o resultado do simulador visivel
         resultado.style.display = 'inherit'
         
-        var preco = (Number(in_kg.value) * 1.54) 
+        var preco = Number(in_kg.value) 
         var estado = sel_estado.value
         var mensagem = ''
 
         if (estado == "sp") {
-            mensagem = `O valor total da sua soja equivale a R$${preco}.<br>
-        A estimativa de perda é de 14% resultando em R$${(preco * 0.86).toFixed(02)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.14).toFixed(2)} `
+
+            var precoo = preco*2.71
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> (Atualizado em 05/10/2022.) <br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 14% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.86).toFixed(02)}.<br><br>
+            Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.14).toFixed(2)}. `
+
         } else if (estado == "ms") {
-            mensagem = `O valor total da sua soja equivale a a R$${preco}.<br>
-        A estimativa de perda é de 16% resultando em R$${(preco * 0.84).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.16).toFixed(2)} `
+
+            var precoo = preco*2.75
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 16% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.84).toFixed(2)}.<br><br>
+          Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.16).toFixed(2)}. `
+
         } else if (estado == "pr") {
-            mensagem = `O valor total da sua soja equivale a R$${preco}.<br>
-        A estimativa de perda é de 18% resultando em R$${(preco * 0.82).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.18).toFixed(2)} `
+
+            var precoo = preco*2.91
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+             Em ${estado.toUpperCase()}, a estimativa de perda é de 18% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.82).toFixed(2)}.<br><br>
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.18).toFixed(2)}.`
+
         } else if (estado == "mt") {
-            mensagem = `O valor total da sua soja equivale a aR$${preco}.<br>
-        A estimativa de perda é de 14% resultando em R$${(preco * 0.86).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.14).toFixed(2)} `
+
+            var precoo = preco*2.67
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+             Em ${estado.toUpperCase()}, a estimativa de perda é de 14% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.86).toFixed(2)}.<br><br>
+            Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.14).toFixed(2)}. `
+
         } else if (estado == "go") {
-            mensagem = `O valor total da sua soja equivale a R$${preco}.<br>
-        A estimativa de perda é de 21% resultando em R$${(preco * 0.79).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.21).toFixed(2)} `
+
+            var precoo = preco*2.62
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. Atualizado em 05/10/2022.<br> <br>
+             Em ${estado.toUpperCase()}, a estimativa de perda é de 21% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.79).toFixed(2)}.<br><br> 
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.21).toFixed(2)}. `
+
         } else if (estado == "rs") {
-            mensagem = `O valor total da sua soja equivale a R$${preco}.<br>
-        A estimativa de perda é de 14% resultando em R$${(preco * 0.86).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.14).toFixed(2)} `
+
+            var precoo = preco*2.73
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 14% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.86).toFixed(2)}.<br><br>
+            Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.14).toFixed(2)}.`
+
         } else if (estado ==  "mg" ) {
-            mensagem = `O valor total da sua soja equivale a R$${preco}.<br>
-        A estimativa de perda é de 11% resultando em R$${(preco * 0.89).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.11).toFixed(2)} `
+
+            var precoo = preco*2.92
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 11% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.89).toFixed(2)}.<br><br>
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.11).toFixed(2)}. `
         } else {
-            mensagem = `O valor total da sua soja equivale a R$${preco}.<br>
-        A estimativa de perda é de 13% resultando em R$${(preco * 0.87).toFixed(2)}.<br> 
-        Com o nosso serviço você economizará aproximadamente R$${(preco * 0.13).toFixed(2)} `
+
+            var precoo = preco*2.64
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 13% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.87).toFixed(2)}.<br><br>
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.13).toFixed(2)}. `
         }
 
         div_mensagem.innerHTML = mensagem
