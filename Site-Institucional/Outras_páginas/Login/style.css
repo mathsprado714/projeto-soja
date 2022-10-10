@@ -62,7 +62,7 @@ main {
     padding: 100px;
     height: 100%;
     width: 100%;
-    background-image: url(./Guia-da-Soja-capa-1.jpeg);
+    background-image: url(../Guia-da-Soja-capa-1.jpeg);
 
     display: flex;
     justify-content: center;

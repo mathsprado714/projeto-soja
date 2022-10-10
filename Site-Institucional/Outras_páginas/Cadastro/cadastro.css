@@ -62,7 +62,7 @@ main {
     height: 1048px;
     width: 100%;
     min-width: 100% ;
-    background-image: url(./Guia-da-Soja-capa-1.jpeg);
+    background-image: url(../Guia-da-Soja-capa-1.jpeg);
 
     display: flex;
     justify-content: center;
