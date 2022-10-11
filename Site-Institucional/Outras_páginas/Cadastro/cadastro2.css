@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    color: white;
+}
+header {
+    padding: 15px;
+    border-bottom: 3px solid #75D390;
+    background-color: rgb(255, 123, 0);
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #383c42;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 2 auto;
+    width: 80%;
+}
+header button{
+    background-color: #75D390;
+    width: 100%;
+    height: 25px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin-top: 2%;
+    font-weight: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    transition-delay: 0ms;
+}
+header button:hover{
+    background-color: #ffffff79;
+    color: #75D390;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+h1{
+    color: #ffffff;
+}
+    
+ul{
+    display: flex;
+    width: 600px;
+    list-style: none;
+}
+     
+li{
+display: flex;
+padding: 0.7em;
+}
+    
+main {
+    height: 1500px;
+    width: 100%;
+    min-width: 100% ;
+    background-image: url(../Guia-da-Soja-capa-1.jpeg);
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+main form {
+  margin-top: 200px;
+  width: 900px;
+  height: 1200px;
+  background-color: #383c42;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4) inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+main form .inputs-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .inputs-container2{
+
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .inputs-container3{
+
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastre-se{
+font-size: 40px;
+
+
+}
+
+main form .inputs-container input {
+    height: 50px;
+    width: 300px;
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+
+    font-size: 16px;
+    color: #312e42;
+
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+main form .inputs-container input:focus {
+    box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
+}
+
+main form .password-container {
+    margin-top: 10px;
+    width: 200px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .password-infos{
+    width: 90%;
+    margin-top: 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main form .password-infos a{
+    transition: 0.2s ease-in-out;
+}
+
+main form .password-infos a:hover{
+    color: #18acfe;
+}
+
+#btn-cadastro{
+    height: 50px;
+    width: 200px;
+    margin-bottom: 100px;
+}
+
+main form button:hover {
+    background-color: #fff;
+    color: #18acfe;
+
+}
+
+main form footer hr{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+main form footer span{
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 5%;
+}
+
+main form footer a{
+    font-weight: 600;
+    transition: 0.2, ease-in-out;
+}
+
+main form footer a:hover{
+  color: #18acfe ;  
+}
+
+.main2 {
+    display: none;
+    height: 1048px;
+    width: 100px;
+    min-width: 100% ;
+    background-image: url(./Guia-da-Soja-capa-1.jpeg);
+
+    justify-content: center;
+
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.main2 .form2{
+    margin-left: 100px;
+    width: 1000px;
+    height: 800px;
+    background-color: #383c42;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4) inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    padding: 100px;
+  
+    flex-direction: column;
+    align-items: center;  
+}
