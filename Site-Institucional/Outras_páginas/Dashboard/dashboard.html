@@ -63,17 +63,17 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Silo 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Silo 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Silo 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Silo 4</button>
+                <button class="btn-chart btn-pink" onclick="obterdadosdografico()" onclick="obterDadosGrafico(1)">Silo 1</button>
+                <button class="btn-chart btn-white" onclick="obterdadosdografico()" onclick="obterDadosGrafico(2)">Silo 2</button>
+                <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(3)">Silo 3</button>
+                <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(4)">Silo 4</button>
             </div>
             <div>
                 <h3 class="tituloGraficos">
                     <span id="tituloAquario"></span>
                 </h3>
             </div>
-            <div class="graph">
+            <div  id="grafico" class="graph" style="display:none;">
                 <canvas id="myChart"></canvas>
             </div>
             <div class="avisoCaptura">
@@ -129,12 +129,16 @@
     );
 </script>
 <script>
+    function obterdadosdografico(){
+        grafico.style.display = 'inherit'
+    }
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     b_cpf.innerHTML = sessionStorage.CPF.USUARIO;
     
     let proximaAtualizacao;
     
     window.onload = obterDadosGrafico(1);
+    
     
     verificar_autenticacao();
     
