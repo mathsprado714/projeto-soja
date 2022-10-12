@@ -340,12 +340,17 @@ input {
   cursor: pointer;
 }
 
-/* pagina extra - simulador */
-.simulador {
-  color: white;
-
+#form_postagem{
+  background-color: #212124;
+  width: 2px;
+  height: 80px;
+  display:fixed;
 }
 
-.simulador .container {
-  flex-direction: column
+#form_postagem span{
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 200px
+
+
 }
