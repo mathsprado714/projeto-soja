@@ -167,7 +167,7 @@ footer .box{
 footer .contato {
     margin: 1% 0;
     margin-left: 10px;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px 15%;
     width: 65%;
     display: flex;
@@ -176,7 +176,7 @@ footer .contato {
 }
 
 footer .img {
-    font-size: 16px;
+    font-size: 10px;
     width: 60%;
     padding: 0 20%;
     display: flex;
@@ -213,7 +213,7 @@ footer .c{
 }
 
 footer .redes{
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
