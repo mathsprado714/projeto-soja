@@ -36,7 +36,7 @@
 <form>
 <section class="inputs-container"><br>
     <h2>Login</h2><br>
-<input type="email" placeholder="example@gmail.com" >
+<input type="email" placeholder="example@gmail.com" id="in_email">
 
 <div class="password-container">
 <input type="password" id="field-password" class="field-password" placeholder="********">
@@ -52,7 +52,7 @@
 </div>
 <a href="#">Esqueceu sua senha?</a>
 </section>
-<button id="btn-logar" onclick="validacao()"><a href="../Dashboard/dashboard.html">Login</a></button>
+<button id="btn-logar" onclick="validacao()"> <a href="" id="valida_user">Login</a></button>
     <footer>
 <hr>
 <span>Ainda não tem uma conta?<a href="../Cadastro/cadastro.html">Cadastre-se</a></span>
@@ -65,6 +65,18 @@
 </html>
 <script>
     function validacao(){
-        alert('Logado com sucesso')
+        var input1 = document.querySelector("#in_email");
+        var email = input1.value;
+        var input2 = document.querySelector("#field-password");
+        var senha = input2.value;
+        
+        var valido = email == 'adm@123' && senha == '123'
+        
+        if (valido) {
+            alert('Login efetuado com sucesso')
+            valida_user.href = "../Dashboard/cards.html"
+        } else {
+            alert('O email ou a senha esta inválido')
+        }
     }
 </script>

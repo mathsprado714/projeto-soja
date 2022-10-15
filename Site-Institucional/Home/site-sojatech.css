@@ -67,7 +67,7 @@ button {
     transition: 0.3s ease-in-out;
 }
 
-button:hover{
+button:hover {
     background-color: #ffffff79;
     color: #75D390;
     font-style: oblique;
@@ -139,6 +139,9 @@ a{
     color: #fff;
     text-decoration: none;
     cursor: pointer;
+}
+button:hover a{
+    color: #75D390;
 }
 
 footer{
