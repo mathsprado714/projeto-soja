@@ -31,8 +31,7 @@
             <h1>SojaTech</h1>
 
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">SPTECHERS!</span>!</h3> <br>
-                <h5>CPF: <span id="b_cpf"></span>
+                <h3>Olá, <span id="b_usuario">SPTECHERS!</span> <br>
                 </h5>
             </div>
 
@@ -62,12 +61,14 @@
 
         <div class="background">
             <div class="dash">
-                <div class="btns-dash">
+                <div class="btns-dash" id="silos">
                     <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                    <button class="btn-chart btn-pink" onclick="obterdadosdografico()">Silo 1</button>
+                    <button class="btn-chart btn-pink" onclick="obterdadosdografico()" onclick="obterDadosGrafico(1)">Silo 1</button>
                     <button class="btn-chart btn-white" onclick="obterdadosdografico()" onclick="obterDadosGrafico(2)">Silo 2</button>
                     <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(3)">Silo 3</button>
                     <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(4)">Silo 4</button>
+                    <button class="btn-chart btn-white"onclick="adicionar()" id="in_adicionar">Adicionar+</button> 
+                    <div id="resultado" style="color:white"></div>
                 </div>
                 <div>
                     <h3 class="tituloGraficos">
@@ -182,6 +183,22 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
         .catch(function (error) {
             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
         });
+
+        
+    }
+
+    function adicionar(){
+        var contador = 0
+        var cont = 3
+        var adicionar = Number(in_adicionar.value)
+        adicionar == 1
+        resultado.innerHTML += `Este botão adicionará um novo botão de silo`
+
+    //     while(contador < adicionar){
+    //     contador++
+    //     cont++
+        
+    // }
     }
     
 </script>
