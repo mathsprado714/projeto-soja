@@ -53,118 +53,146 @@
 
         </div>
 
-        <div class="dash">
-            <h1 style="color:white; margin-left:100px;">Temperatura</h1>
-            <div class="regua">
-                <div class="item-regua perigo-frio">
-                    <h4>Perigo</h4>
-                    <h2>9°C</h2>
-                </div>
-                <div class="item-regua alerta-frio">
-                    <h4>Alerta</h4>
-                    <h2>10.5°C</h2>
-                </div>
-                <div class="item-regua ideal">
-                    <h4>Ideal</h4>
-                    <h2>12°C</h2>
-                </div>
-                <div class="item-regua alerta-quente">
-                    <h4>Alerta</h4>
-                    <h2>13.5°C</h2>
-                </div>
-                <div class="item-regua perigo-quente">
-                    <h4>Perigo</h4>
-                    <h2>15°C</h2>
-                </div>
-            </div>
-
-            <div class="dashU">
-                <h1 style="color:white; margin-left:100px;">Umidade (Armazenamento até 1 ano)</h1>
+        <div class="background">
+            <div class="dash">
+                <h1 style="color:white; margin-left:100px;">Temperatura</h1>
                 <div class="regua">
                     <div class="item-regua perigo-frio">
                         <h4>Perigo</h4>
-                        <h2>7%</h2>
+                        <h2>9°C</h2>
                     </div>
                     <div class="item-regua alerta-frio">
                         <h4>Alerta</h4>
-                        <h2>8%</h2>
+                        <h2>10.5°C</h2>
                     </div>
                     <div class="item-regua ideal">
                         <h4>Ideal</h4>
-                        <h2>9%</h2>
+                        <h2>12°C</h2>
                     </div>
                     <div class="item-regua alerta-quente">
                         <h4>Alerta</h4>
-                        <h2>10%</h2>
+                        <h2>13.5°C</h2>
                     </div>
                     <div class="item-regua perigo-quente">
                         <h4>Perigo</h4>
-                        <h2>11%</h2>
+                        <h2>15°C</h2>
                     </div>
                 </div>
-
                 <div class="dashU">
-                    <h1 style="color:white; margin-left:100px;">Umidade (Armazenamento acima de 1 ano e até 5 anos)</h1>
+                    <h1 style="color:white; margin-left:100px;">Umidade (Armazenamento até 1 ano)</h1>
                     <div class="regua">
                         <div class="item-regua perigo-frio">
                             <h4>Perigo</h4>
-                            <h2>6%</h2>
+                            <h2>7%</h2>
                         </div>
                         <div class="item-regua alerta-frio">
                             <h4>Alerta</h4>
-                            <h2>7%</h2>
+                            <h2>8%</h2>
                         </div>
                         <div class="item-regua ideal">
                             <h4>Ideal</h4>
-                            <h2>8%</h2>
+                            <h2>9%</h2>
                         </div>
                         <div class="item-regua alerta-quente">
                             <h4>Alerta</h4>
-                            <h2>9%</h2>
+                            <h2>10%</h2>
                         </div>
                         <div class="item-regua perigo-quente">
                             <h4>Perigo</h4>
-                            <h2>10%</h2>
+                            <h2>11%</h2>
                         </div>
                     </div>
-
-            <div class="cards">
-                <div class="card">
-                    <h1>Silo 1 (Temperatura/ Umidade)</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_1">15°C / 10%</p>
+                    <div class="dashU">
+                        <h1 style="color:white; margin-left:100px;">Umidade (Armazenamento acima de 1 ano e até 5 anos)</h1>
+                        <div class="regua">
+                            <div class="item-regua perigo-frio">
+                                <h4>Perigo</h4>
+                                <h2>6%</h2>
+                            </div>
+                            <div class="item-regua alerta-frio">
+                                <h4>Alerta</h4>
+                                <h2>7%</h2>
+                            </div>
+                            <div class="item-regua ideal">
+                                <h4>Ideal</h4>
+                                <h2>8%</h2>
+                            </div>
+                            <div class="item-regua alerta-quente">
+                                <h4>Alerta</h4>
+                                <h2>9%</h2>
+                            </div>
+                            <div class="item-regua perigo-quente">
+                                <h4>Perigo</h4>
+                                <h2>10%</h2>
+                            </div>
+                        </div>
+                <div class="cards">
+                    <!-- Silo 1 -->
+                    <div class="card">
+                        <h1>Silo 1 (Temperatura/ Umidade)</h1>
+                        <div class="temperatura">
+                            <p>
+                                Temperatura maxima no dia: 14°C<br>
+                                Temperatura minima no dia: 10°C<br>
+                                Umidade maxima no dia: 10%<br>
+                                Umidade minima no dia: 8%
+                            </p>
+                        </div>
+                        <div class="cor-alerta" id="card_1">
+                            Tempo real: <br>
+                            12.3°C / 8% </div>
                     </div>
-                    <div class="cor-alerta" id="card_1"></div>
-                </div>
-                <div class="card">
-                    <h1>Silo 2 (Temperatura/ Umidade)</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_2">14°C / 7%</p>
+                    <!-- Silo 2 -->
+                    <div class="card">
+                        <h1>Silo 2 (Temperatura/ Umidade)</h1>
+                        <div class="temperatura">
+                            <p>
+                                Temperatura maxima no dia: 12°C<br>
+                                Temperatura minima no dia: 11°C<br>
+                                Umidade maxima no dia: 9.5%<br>
+                                Umidade minima no dia: 9%
+                            </p>
+                        </div>
+                        <div class="cor-alerta" id="card_1">
+                            Tempo real: <br>
+                            12°C / 9% </div>
                     </div>
-                    <div class="cor-alerta" id="card_2"></div>
-
-                </div>
-                <div class="card">
+                   <!-- Silo 3 -->
+                   <div class="card">
                     <h1>Silo 3 (Temperatura/ Umidade)</h1>
                     <div class="temperatura">
-                        <p id="temp_aquario_3">10°C / 9%</p>
+                        <p>
+                            Temperatura maxima no dia: 14°C<br>
+                            Temperatura minima no dia: 10°C<br>
+                            Umidade maxima no dia: 10%<br>
+                            Umidade minima no dia: 9%
+                        </p>
                     </div>
-                    <div class="cor-alerta ideal" id="card_3"></div>
+                    <div class="cor-alerta" id="card_1">
+                        Tempo real: <br>
+                        14°C / 7% </div>
                 </div>
+                <!-- Silo 4 -->
                 <div class="card">
                     <h1>Silo 4 (Temperatura/ Umidade)</h1>
                     <div class="temperatura">
-                        <p id="temp_aquario_4">13°C / 11%</p>
+                        <p>
+                            Temperatura maxima no dia: 14°C<br>
+                            Temperatura minima no dia: 10°C<br>
+                            Umidade maxima no dia: 10%<br>
+                            Umidade minima no dia: 9%
+                        </p>
                     </div>
-                    <div class="cor-alerta" id="card_4"></div>
+                    <div class="cor-alerta" id="card_1">
+                        Tempo real: <br>
+                        14°C / 7% </div>
                 </div>
 
             </div>
-
-        </div>
-    </div>
-
-
+            </div>
+            </div>
+            </div>
+            </div>
 </body>
 
 <script>

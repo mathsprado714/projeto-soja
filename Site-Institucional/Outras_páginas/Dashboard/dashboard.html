@@ -60,24 +60,26 @@
 
         </div>
 
-        <div class="dash">
-            <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterdadosdografico()">Silo 1</button>
-                <button class="btn-chart btn-white" onclick="obterdadosdografico()" onclick="obterDadosGrafico(2)">Silo 2</button>
-                <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(3)">Silo 3</button>
-                <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(4)">Silo 4</button>
-            </div>
-            <div>
-                <h3 class="tituloGraficos">
-                    <span id="tituloAquario"></span>
-                </h3>
-            </div>
-            <div  id="grafico" class="graph" style="display:none;">
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="avisoCaptura">
-                <p id="avisoCaptura" style="color: white"></p>
+        <div class="background">
+            <div class="dash">
+                <div class="btns-dash">
+                    <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
+                    <button class="btn-chart btn-pink" onclick="obterdadosdografico()">Silo 1</button>
+                    <button class="btn-chart btn-white" onclick="obterdadosdografico()" onclick="obterDadosGrafico(2)">Silo 2</button>
+                    <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(3)">Silo 3</button>
+                    <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(4)">Silo 4</button>
+                </div>
+                <div>
+                    <h3 class="tituloGraficos">
+                        <span id="tituloAquario"></span>
+                    </h3>
+                </div>
+                <div  id="grafico" class="graph" style="display:none;">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="avisoCaptura">
+                    <p id="avisoCaptura" style="color: white"></p>
+                </div>
             </div>
         </div>
     </div>

@@ -116,18 +116,11 @@ body {
 
 .dash {
   width: 75%;
+  height: 150%;
   position: relative;
   top: 0;
   left: 25%;
   background-color: #161618;
-
-  /* width: 75%;
-    display: flex;
-    background-color: #161618;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;*/
-  height: 100vh;
 }
 
 .regua {
@@ -178,21 +171,19 @@ body {
 
 .card {
   margin: 2%;
-  width: 40%;
+  width: 60%;
   flex-wrap: wrap;
   display: flex;
-  text-align: center;
   height: 180px;
-  justify-content: right;
   background-color: #212124;
   font-size: 20px;
 }
 
 .card p {
+  text-align: initial;
   margin: 0;
-  font-size: 50px;
+  font-size: 20px;
   font-weight: lighter;
-  text-align: left;
 }
 
 .cards h1 {
@@ -249,3 +240,10 @@ body {
   margin: 5px;
   border-radius: 3px;
 }
+
+.background{
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #161618;
+  }
