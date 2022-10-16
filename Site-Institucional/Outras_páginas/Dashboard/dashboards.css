@@ -116,7 +116,7 @@ body {
 
 .dash {
   width: 75%;
-  height: 150%;
+  height: 200%;
   position: relative;
   top: 0;
   left: 25%;
@@ -162,11 +162,13 @@ body {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   height: 450px;
-  width: 100%;
+  width: 1000px;
   align-items: center;
   color: white;
+  margin-left: 65px;
+  padding: 30px;
 }
 
 .card {
@@ -174,9 +176,9 @@ body {
   width: 60%;
   flex-wrap: wrap;
   display: flex;
-  height: 180px;
+  height: 220px;
   background-color: #212124;
-  font-size: 20px;
+  font-size: 17.2px;
 }
 
 .card p {
@@ -246,4 +248,8 @@ body {
     position: relative;
     top: 0;
     background-color: #161618;
+  }
+
+  #card_1 {
+    margin-top: 60px;
   }
