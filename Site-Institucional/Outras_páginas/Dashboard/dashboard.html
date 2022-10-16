@@ -67,7 +67,7 @@
                     <button class="btn-chart btn-white" onclick="obterdadosdografico()" onclick="obterDadosGrafico(2)">Silo 2</button>
                     <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(3)">Silo 3</button>
                     <button class="btn-chart btn-white"onclick="obterdadosdografico()" onclick="obterDadosGrafico(4)">Silo 4</button>
-                    <button class="btn-chart btn-white"onclick="adicionar()" id="in_adicionar">Adicionar+</button> 
+                    <button class="btn-chart btn-white"onclick="adicionar(event)" id="in_adicionar">Adicionar+</button> 
                     <div id="resultado" style="color:white"></div>
                 </div>
                 <div>
@@ -186,19 +186,15 @@ b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
         
     }
+    
+    function adicionar(e){
+        const lastButton = e.target.previousElementSibling
+        const newButton = lastButton.cloneNode()
+        const siloNumber = Number(lastButton.innerText.split(' ')[1]) + 1
+        newButton.innerText = `Silo ${siloNumber}`
 
-    function adicionar(){
-        var contador = 0
-        var cont = 3
-        var adicionar = Number(in_adicionar.value)
-        adicionar == 1
-        resultado.innerHTML += `Este botão adicionará um novo botão de silo`
-
-    //     while(contador < adicionar){
-    //     contador++
-    //     cont++
-        
-    // }
+        lastButton.parentNode.insertBefore(newButton, lastButton.nextSibling)
+        console.log(newButton)
     }
     
 </script>

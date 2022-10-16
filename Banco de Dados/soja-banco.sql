@@ -99,6 +99,11 @@ insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, 
 	('Soares2', 'soares2@yahoo.com', 'senha2', '13345612345612', '143456987456', '153456789654', 'Rua do jornalismo', '3', null, 'Itaim Bibi', 'citytwo', 'SP', '22365478'),
     ('Soares3', 'soares3@yahoo.com', 'senha3', '13345612345622', '143456987466', '153456789644', 'Rua do Publicitario', '4', null, 'Jardins', 'city3', 'BA', '22365488');
 
+insert into orcamento(valorTotal, fkCliente)value
+	('5426', 1);
+
+insert into armazem(logradouro, numero, bairro, cidade, estado, cep, fkCliente)
+	();
     
 insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, numero, complemento, bairro, cidade, estado, cep) values
 	('Soares', 'soaresgonzalito@yahoo.com', 'senha123', '12345612345612', '123456987456', '123456789654', null,  'Rua da Imprensa', '2', null, 'Monte Castelo', 'cityone', 'GO', '12365478');
