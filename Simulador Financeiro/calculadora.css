@@ -17,7 +17,7 @@ h1{
 
 .simuladorBOX{
     background-color: #383c42;
-    padding: 80px;
+    padding: 5%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

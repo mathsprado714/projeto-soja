@@ -1,3 +1,6 @@
+
+
+
 .caixaM {
     background-color: #e5e5e58f;
     padding: 20px 20px;
@@ -97,4 +100,26 @@
 
     color: black;
     display: flex;
+}
+
+
+button {
+    padding: 1.5%;
+    background-color: #75D390;
+    width: 100%;
+    height: 20%;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin-top: 2%;
+    font-weight: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ffffff79;
+    color: #75D390;
+    font-style: oblique;
+    font-weight: bold;
 }
