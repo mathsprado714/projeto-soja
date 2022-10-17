@@ -1,5 +1,7 @@
 <div>
-    <h1><strong><em> Site-Institucional: 100%; <br> Banco-Dados: 100%; <br> Simulador-Financeiro: 100%;</em></strong></h1>
+    <center>
+        <h1><strong><em> Site-Institucional: 100%; <br> Banco-Dados: 100%; <br> Simulador-Financeiro: 100%;</em></strong></h1>
+    </center>
 </div>
 <div>
     <p><strong><em>Tecnologias usadas no Projeto-Soja</em></strong></p>
