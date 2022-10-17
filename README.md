@@ -9,6 +9,7 @@
         <img align-itens="center" alt="JS" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
         <img align-itens="center" alt="MySQL" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white">
         <img align-itens="center" alt="C++" src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
+        <img align-itens="center" alt="ARDUINO" src="https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white">
     </div></p>
     #Regras de conduta do projeto da equipe: Para criar um ambiente de trabalho saudável e que seja agradável para todos algumas regras foram definidas pela equipe:
 
