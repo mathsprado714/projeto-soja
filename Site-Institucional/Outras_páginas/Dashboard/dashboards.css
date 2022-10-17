@@ -160,20 +160,17 @@ body {
 }
 
 .cards {
-  display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   height: 450px;
-  width: 1000px;
-  align-items: center;
+  width: 900px;
+  align-items: flex-start;
   color: white;
-  margin-left: 65px;
-  padding: 30px;
+  margin-left: 60px;
 }
 
 .card {
   margin: 2%;
-  width: 60%;
   flex-wrap: wrap;
   display: flex;
   height: 220px;
