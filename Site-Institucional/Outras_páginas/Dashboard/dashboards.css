@@ -163,10 +163,10 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   height: 450px;
-  width: 900px;
+  width: 87%;
   align-items: flex-start;
   color: white;
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 .card {
