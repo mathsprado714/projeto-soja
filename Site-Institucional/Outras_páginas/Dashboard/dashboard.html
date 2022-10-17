@@ -77,8 +77,11 @@
                     </h3>
                 </div>
                 <div  id="grafico" class="graph" style="display:none;">
+                    <p style="color:white;text-align:center;">Grafico com medições no periodo de 24 horas</p>
                     <canvas id="myChart"></canvas>
+                    <p style="color:white;text-align:center;">Grafico com medições em tempo real</p>
                 </div>
+
                 <div class="avisoCaptura">
                     <p id="avisoCaptura" style="color: white"></p>
                 </div>
@@ -93,21 +96,39 @@
 
 <script>
    const labels = [
+      '01:00',
+      '02:00',
+      '03:00',
+      '04:00',
+      '05:00',
+      '06:00',
+      '07:00',
+      '08:00',
+      '09:00',
+      '10:00',
+      '11:00',
       '12:00',
       '13:00',
       '14:00',
       '15:00',
       '16:00',
       '17:00',
+      '18:00',
+      '19:00',
+      '20:00',
+      '21:00',
+      '22:00',
+      '23:00',
+      '00:00',
     ];
-  
+    
     const data = {
       labels: labels,
       datasets: [{
         label: 'Temperatura',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: [22, 22, 22, 23, 20, 19],
+        data: [11, 12, 12, 12, 12, 11,11.5,11,11.2,11,13.5,10,12.3,12,11,12,11,12.2,12,11,11.5,11.8,11.7,12],
       },
     {
         label: 'Umidade',
@@ -129,6 +150,10 @@
   <script>
     const myChart = new Chart(
       document.getElementById('myChart'),
+      config
+    );
+    const myChart2 = new Chart2(
+      document.getElementById('myChart2'),
       config
     );
 </script>
