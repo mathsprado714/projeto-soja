@@ -1,4 +1,5 @@
 create database soja; 
+
 use soja;
 show tables;
 
@@ -78,11 +79,16 @@ create table registro(
     primary key (idRegistro, fkSensor)
 );
 
-desc armazem;
+desc armazem; 
+select*from armazem;
 desc cliente;
-desc funcionario;
-desc galpaoSilo;
+select*from cliente;
+desc funcionario; 
+select*from funcionario;
+desc galpaoSilo; 
+select*from galpaoSilo;
 desc orcamento;
+select*from orcamento;
 desc sensor;
 show tables;
 alter table cliente drop column cpfCnpj;
@@ -99,16 +105,70 @@ insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, 
 	('Soares2', 'soares2@yahoo.com', 'senha2', '13345612345612', '143456987456', '153456789654', 'Rua do jornalismo', '3', null, 'Itaim Bibi', 'citytwo', 'SP', '22365478'),
     ('Soares3', 'soares3@yahoo.com', 'senha3', '13345612345622', '143456987466', '153456789644', 'Rua do Publicitario', '4', null, 'Jardins', 'city3', 'BA', '22365488');
 
-insert into orcamento(valorTotal, fkCliente)value
-	('5426', 1);
+insert into armazem (logradouro, numero, bairro, cidade, estado, cep) values
+('Alameda dos Rins', '59', 'Vila Conceição', 'São Paulo', 'SP', '02221000');
 
-insert into armazem(logradouro, numero, bairro, cidade, estado, cep, fkCliente)
-	();
-    
-insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, numero, complemento, bairro, cidade, estado, cep) values
-	('Soares', 'soaresgonzalito@yahoo.com', 'senha123', '12345612345612', '123456987456', '123456789654', null,  'Rua da Imprensa', '2', null, 'Monte Castelo', 'cityone', 'GO', '12365478');
-    ('Fernando', 'ferna@outlook.com', 'senha2', '456789453331', '931481752333', '' null,'Rua da Imprensa', '526', 'Monte Castelo', 'city02', 'MS', '21346598');
-insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, numero, bairro, cidade, estado, cep) values
-	('Soares', 'soaresgonzalito@yahoo.com', 'senha1', '12345614893333', '834661195333', null, 'Rua da Imprensa', '826', 'Monte Castelo', 'city01', 'SP', '01234521'),
-    ('Fernando', 'ferna@outlook.com', 'senha2', '12345678945333' '931481752333', null,'Rua da Imprensa', '526', 'Monte Castelo', 'city02', 'MS', '21346598'),
-    ('Roberto', 'robertloro@gmail.com', 'senha3', '12345613543333', '925528665333', null, 'Avenida Tocantins', '785', 'Vila Jardim Rio Claro', 'city03', 'GO', '54631278');
+insert into armazem (logradouro, numero, bairro, cidade, estado, cep) values
+('Jardim Alves', '104', 'Consolação', 'São Paulo', 'SP', '02222000');
+
+insert into armazem (logradouro, numero, bairro, cidade, estado, cep) values
+('Estrada do Alvarenga', '1899', 'Guacuri', 'São Paulo', 'SP', '02221040');
+
+insert into funcionario(nome, rg, setor) values
+('Kauã', '39771788', 'Desenvolvimento');
+
+insert into funcionario(nome, rg, setor) values
+('Lucas', '39771789', 'Operador');
+
+insert into funcionario(nome, rg, setor) values
+('Matheus', '59781789', 'Operador');
+
+insert into galpaoSilo (alaArmazem, anosArmazenado) values
+('Leste', '3');
+
+insert into galpaoSilo (alaArmazem, anosArmazenado) values
+('Sul', '5');
+
+insert into galpaoSilo (alaArmazem, anosArmazenado) values
+('Oeste', '1');
+
+show tables;
+select * from armazem;
+select * from cliente;
+select * from funcionario;
+select * from galpaosilo;
+select * from orcamento;
+select * from registro;
+select * from sensor;
+
+update armazem set fkClienteA = 1 where idArmazem = 1;
+update armazem set fkClienteA = 3 where idArmazem = 2;
+update armazem set fkClienteA = 2 where idArmazem = 3;
+
+update funcionario set fkArmazemF = 1 where idFuncionario = 1; 
+update funcionario set fkArmazemF = 3 where idFuncionario = 2;
+update funcionario set fkArmazemF = 2 where idFuncionario = 3;
+
+update galpaosilo set fkArmazemGS = 3 where idGalpaoSilo = 1;
+update galpaosilo set fkArmazemGS = 1 where idGalpaoSilo = 2;
+update galpaosilo set fkArmazemGS = 2 where idGalpaoSilo = 3;
+
+select c.*,a.*,f.*
+	from cliente c join armazem a
+		on a.fkClienteA = c.idCliente
+			join funcionario f
+				on f.fkArmazemF = a.idArmazem; 
+
+select c.nome,c.email,a.*,f.*
+	from cliente c join armazem a
+		on a.fkClienteA = c.idCliente
+			join funcionario f
+				on f.fkArmazemF = a.idArmazem
+					where c.idCliente = 1;
+                    
+select c.*,a.*,f.*
+	from cliente c join armazem a
+		on a.fkClienteA = c.idCliente
+			join funcionario f
+				on f.fkArmazemF = a.idArmazem
+					where c.idCliente = 1;
