@@ -132,15 +132,15 @@ body {
 }
 
 .perigo-frio {
-  background-color: #5c6bc0;
+  background-color: #ff0000;
 }
 
 .perigo-quente {
-  background-color: #ff7043;
+  background-color: #ff0000;
 }
 
 .alerta-frio {
-  background-color: #42a5f5;
+  background-color: #ffee58;
 }
 
 .alerta-quente {
@@ -148,7 +148,7 @@ body {
 }
 
 .ideal {
-  background-color: #9ccc65;
+  background-color: #2fff00;
 }
 
 .item-regua {
@@ -250,5 +250,10 @@ body {
 
   #card_1 {
     margin-top: 60px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 
