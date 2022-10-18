@@ -1,5 +1,4 @@
 create database soja; 
-
 use soja;
 show tables;
 
@@ -94,9 +93,6 @@ show tables;
 alter table cliente drop column cpfCnpj;
 
 alter table cliente add column cnpj char(14) after senha;
-drop database soja;
-create database soja;
-use soja;
 
 insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, numero, complemento, bairro, cidade, estado, cep) values
 	('Soares', 'soaresgonzalito@yahoo.com', 'senha123', '12345612345612', '123456987456', '123456789654', 'Rua da Imprensa', '2', null, 'Monte Castelo', 'cityone', 'GO', '12365478');
@@ -106,31 +102,31 @@ insert into cliente (nome, email, senha, cnpj, telefone1,telefone2, logradouro, 
     ('Soares3', 'soares3@yahoo.com', 'senha3', '13345612345622', '143456987466', '153456789644', 'Rua do Publicitario', '4', null, 'Jardins', 'city3', 'BA', '22365488');
 
 insert into armazem (logradouro, numero, bairro, cidade, estado, cep) values
-('Alameda dos Rins', '59', 'Vila Conceição', 'São Paulo', 'SP', '02221000');
+	('Alameda dos Rins', '59', 'Vila Conceição', 'São Paulo', 'SP', '02221000');
 
 insert into armazem (logradouro, numero, bairro, cidade, estado, cep) values
-('Jardim Alves', '104', 'Consolação', 'São Paulo', 'SP', '02222000');
+	('Jardim Alves', '104', 'Consolação', 'São Paulo', 'SP', '02222000');
 
 insert into armazem (logradouro, numero, bairro, cidade, estado, cep) values
-('Estrada do Alvarenga', '1899', 'Guacuri', 'São Paulo', 'SP', '02221040');
+	('Estrada do Alvarenga', '1899', 'Guacuri', 'São Paulo', 'SP', '02221040');
 
 insert into funcionario(nome, rg, setor) values
-('Kauã', '39771788', 'Desenvolvimento');
+	('Kauã', '39771788', 'Desenvolvimento');
 
 insert into funcionario(nome, rg, setor) values
-('Lucas', '39771789', 'Operador');
+	('Lucas', '39771789', 'Operador');
 
 insert into funcionario(nome, rg, setor) values
-('Matheus', '59781789', 'Operador');
+	('Matheus', '59781789', 'Operador');
 
 insert into galpaoSilo (alaArmazem, anosArmazenado) values
-('Leste', '3');
+	('Leste', '3');
 
 insert into galpaoSilo (alaArmazem, anosArmazenado) values
-('Sul', '5');
+	('Sul', '5');
 
 insert into galpaoSilo (alaArmazem, anosArmazenado) values
-('Oeste', '1');
+	('Oeste', '1');
 
 show tables;
 select * from armazem;
