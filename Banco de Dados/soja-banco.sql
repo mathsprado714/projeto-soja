@@ -149,6 +149,10 @@ update galpaosilo set fkArmazemGS = 3 where idGalpaoSilo = 1;
 update galpaosilo set fkArmazemGS = 1 where idGalpaoSilo = 2;
 update galpaosilo set fkArmazemGS = 2 where idGalpaoSilo = 3;
 
+update funcionario set fkSupervisor = null where idFuncionario = 1; 
+update funcionario set fkSupervisor = 1 where idFuncionario = 2;
+update funcionario set fkSupervisor = 1 where idFuncionario = 3;
+
 select c.*,a.*,f.*
 	from cliente c join armazem a
 		on a.fkClienteA = c.idCliente
@@ -168,3 +172,9 @@ select c.*,a.*,f.*
 			join funcionario f
 				on f.fkArmazemF = a.idArmazem
 					where c.idCliente = 1;
+                    
+select f.nome, s.nome from funcionario f join funcionario s on f.idFuncionario = s.fkSupervisor;
+
+select c.nome, c.cnpj, a.*, f.rg from cliente as c join armazem as a on a.fkClienteA = c.idCliente join funcionario as f on f.fkArmazemF = a.idArmazem;
+
+select c.nome, a.bairro, f.setor from cliente as c join armazem as a on a.fkClienteA = c.idCliente join funcionario as f on f.fkArmazemF = a.idArmazem;
