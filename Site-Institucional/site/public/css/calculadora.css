@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.header {
+  position: relative;
+  padding: 1%;
+  display: flex;
+  width: 100%;
+  border-bottom: 3px solid #75D390;
+  background-color: #383c42;
+}
+
+.header .container {
+  justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.agora {
+  font-weight: 800;
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #f1f1f1;
+}
+
+
+.titulo {
+  color: #f1f1f1;
+  width: fit-content;
+  font-weight: 500;
+}
+
+
+/* BANNER */
+
+.banner {
+  padding: 15em 0;
+  color: white;
+  background-image: url("../assets/imgs/WhatsApp\ Image\ 2022-09-20\ at\ 21.03.31.jpeg");
+  background-size: cover;
+}
+
+.banner .container {
+  height: 400px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tamanho-conteudo { 
+  height: fit-content !important;
+}
+
+.banner p {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  font-size: 36px;
+}
+
+.banner .container span {
+  font-weight: 800;
+}
+
+.simuladorBOX{
+    background-color: #383c42;
+    padding: 5em;
+    border-radius: 10px;
+    margin-top:5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.simuladorC{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#in_kg{
+    color: black;
+    margin-top: 12px;
+}
+
+#sel_estado {
+    color: black;
+    margin-top: 12px;
+}
+
+#sel_estado option{
+    color: black;
+}
+
+.div_mensagem{
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #32b9cd;
+    height: 150px;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+  }
+  
+  .footer .container {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer .container .version {
+    font-size: 12px;
+  }
+  

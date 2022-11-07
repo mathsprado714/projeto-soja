@@ -1,0 +1,123 @@
+
+.caixaM {
+    background-color: #e5e5e58f;
+    padding: 20px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 400px;
+    margin-left: 45px;
+
+}
+
+.caixaM h1 {
+    color: green;
+    margin-bottom: 10px;
+    
+}
+.caixaVI {
+    background-color: #e5e5e58f;
+    padding: 20px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.caixaVI h1 {
+    color: green;
+    margin-bottom: 10px;
+}
+.caixaVA {
+    background-color: #e5e5e58f;
+    padding: 20px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 400px;
+    margin-left: 45px;
+}
+
+.caixaVA h1 {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.banner1{
+    background-image: url('https://blog.jacto.com.br/wp-content/uploads/2017/08/produ%C3%A7%C3%A3o-de-soja.jpg');
+    background-repeat: no-repeat;
+    height: 600px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #75D390;
+}   
+
+.banner2{
+    background-image: url('https://img.freepik.com/fotos-gratis/sementes-de-soja-em-sacos-de-piso-de-madeira-e-canhamo-conceito-de-nutricao-alimentar_1150-26328.jpg?w=2000');
+    background-repeat: no-repeat;
+    height: 600px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #75D390;
+}  
+
+.banner3{
+    background-image: url('https://portaladama.com/wp-content/uploads/2020/08/Guia-da-Soja-capa-1.jpeg');
+    background-repeat: no-repeat;
+    height: 600px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #75D390;
+}  
+.txtM h2{
+
+    color: black;
+    display: flex;
+}
+
+.txtVI h2{
+
+    color: black;
+    display: flex;
+}
+
+.txtVA h2{
+
+    color: black;
+    display: flex;
+}
+
+
+button {
+    padding: 1.5%;
+    background-color: #75D390;
+    width: 100%;
+    height: 20%;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin-top: 2%;
+    font-weight: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ffffff79;
+    color: #75D390;
+    font-style: oblique;
+    font-weight: bold;
+}

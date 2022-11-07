@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <link rel="shortcut icon" href="../Site-Institucional/Imagem2.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3550ee625.js" crossorigin="anonymous" defer></script>
+
+    <title>SIMULADOR FINANCEIRO</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">SojaTech</h1>
+            <ul class="navbar">
+                <a href="./quem_somos.html">
+                    <li class="agora">Sobre nós</li>
+                </a>
+                <li>
+                    <a href="./simulador.html">Simulador</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="./login.html">Login</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <div class="container">
+            <div class="simuladorBOX">
+                <div class="simuladorC">
+                    <h1>Simulador Soja</h1><br><br>
+
+                    Quilograma de soja <input placeholder='0kg' id="in_kg" style="border-radius: 12px; text-align: 
+    center;height:40px; width: 190px;"><br>
+                    Selecione o estado para o serviço
+
+                    <select id="sel_estado" style="border-radius: 12px; height:40px; width: 190px; text-align: center;">
+                        <option value="">- select -</option>
+                        <option value="sp">São Paulo</option>
+                        <option value="ms">Mato Grosso do Sul</option>
+                        <option value="pr">Paraná</option>
+                        <option value="mt">Mato grosso</option>
+                        <option value="go">Goiás</option>
+                        <option value="sc">Santa Catarina</option>
+                        <option value="rs">Rio Grande do Sul</option>
+                        <option value="mg">Minas Gerais</option>
+                        <option value="ba">Bahia</option>
+
+                    </select>
+
+                    <button onclick="verificar()" style="height:30px; width: 150px;margin-top: 20px;">Calcular
+                        perdas</button>
+                </div>
+                <!-- <p>Ao clicar em verificar, aparecerá o valor total e a estimativa de perda em reais da soja em seu armazenamento</p>
+    <button onclick="verificar()">Verificar</button> -->
+            </div>
+
+            <!-- Aqui foi usado o css na propria tag "resultado" onde o display ficou: display:none; para assim ele ficar invisivel, assim quando for chamado na function ele aparece com a
+tag resultado.style.display = 'inherit'-->
+            <div id="resultado"
+                style="margin-left: 50px; background-color: #383c42;padding: 130px;border-radius: 10px;flex-direction: column; align-items: center;justify-content: center;display: none;">
+                <div id="div_mensagem" class="div_mensagem">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>Feito com amor por um aluno &hearts; SPTech &copy; 2022
+                <br>
+                <span class="version">
+                    v1.0.0
+                </span>
+            </h4>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    function verificar() {
+
+        // Tag para deixar o resultado do simulador visivel
+        resultado.style.display = 'inherit'
+
+        var preco = Number(in_kg.value)
+        var estado = sel_estado.value
+        var mensagem = ''
+
+        if (estado == "sp") {
+
+            var precoo = preco * 2.71
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> (Atualizado em 05/10/2022.) <br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 14% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.86).toFixed(02)}.<br><br>
+            Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.14).toFixed(2)}. `
+
+        } else if (estado == "ms") {
+
+            var precoo = preco * 2.75
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 16% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.84).toFixed(2)}.<br><br>
+          Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.16).toFixed(2)}. `
+
+        } else if (estado == "pr") {
+
+            var precoo = preco * 2.91
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+             Em ${estado.toUpperCase()}, a estimativa de perda é de 18% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.82).toFixed(2)}.<br><br>
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.18).toFixed(2)}.`
+
+        } else if (estado == "mt") {
+
+            var precoo = preco * 2.67
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+             Em ${estado.toUpperCase()}, a estimativa de perda é de 14% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.86).toFixed(2)}.<br><br>
+            Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.14).toFixed(2)}. `
+
+        } else if (estado == "go") {
+
+            var precoo = preco * 2.62
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. Atualizado em 05/10/2022.<br> <br>
+             Em ${estado.toUpperCase()}, a estimativa de perda é de 21% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.79).toFixed(2)}.<br><br> 
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.21).toFixed(2)}. `
+
+        } else if (estado == "rs") {
+
+            var precoo = preco * 2.73
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 14% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.86).toFixed(2)}.<br><br>
+            Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.14).toFixed(2)}.`
+
+        } else if (estado == "mg") {
+
+            var precoo = preco * 2.92
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 11% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.89).toFixed(2)}.<br><br>
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.11).toFixed(2)}. `
+        } else {
+
+            var precoo = preco * 2.64
+            mensagem = `O valor das quilogramas de soja inseridas em função do estado de ${estado.toUpperCase()}, se encontra em aproximadamente R$${precoo}. <br> Atualizado em 05/10/2022.<br> <br>
+            Em ${estado.toUpperCase()}, a estimativa de perda é de 13% por quilograma, reduzindo seu poder de venda no mercado físico para R$${(precoo * 0.87).toFixed(2)}.<br><br>
+             Com o nosso serviço você economizará aproximadamente R$${(precoo * 0.13).toFixed(2)}. `
+        }
+
+        div_mensagem.innerHTML = mensagem
+
+    }
+</script>
