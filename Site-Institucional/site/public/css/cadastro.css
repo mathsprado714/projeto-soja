@@ -1,0 +1,190 @@
+:root {
+    --primary-text: #fbf9ff;
+    --text: #ffffff;
+    --form-bg: #049e30;
+    --bg: #808080;
+    --input-bg: #f6f6f6;
+    --erro-bg: #ea0000;
+  
+  }
+  
+  * {
+    /* font-family: "Roboto", sans-serif; */
+    transition-property: background color;
+    transition-duration: 600ms;
+  }
+  
+  .corpo {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    height: 100vh;
+    
+  }
+  
+  .main {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    max-width: 1300px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+    border-radius: 20px;
+    margin-top: 10%;
+  }
+  
+  .form-img-cadastro {
+    flex-grow: 1;
+    background-image: url("../assets/imgs/form-cadastro.webp");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+   
+    /* width: 80%; */
+  }
+  .form-img-login {
+    flex-grow: 1;
+    background-image: url("../assets/imgs/form-cadastro.webp");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* width: 80%; */
+  }
+  .form-container-cadastro1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 150px;
+    background-color: var(--form-bg);
+    color: var(--text);
+    /* width: 19%; */
+  }
+  .form-container-cadastro2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 150px;
+    background-color: var(--form-bg);
+    color: var(--text);
+    /* width: 19%; */
+  }
+  .form-container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 150px;
+    background-color: var(--form-bg);
+    color: var(--text);
+    /* width: 19%; */
+  }
+  .mensagem-erro{
+    background-color: var(--erro-bg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;  
+    text-align: center;
+  }
+  
+  .form-header {
+    padding: 20px 0;
+    border-top: solid 1px var(--bg);
+  }
+  
+  .form-header a {
+    color: var(--primary-text);
+    font-weight: bold;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px var(--bg);
+    border-bottom: solid 1px var(--bg);
+    padding: 20px 0;
+  }
+  
+  h3 {
+    font-weight: bold;
+    color: var(--primary-text);
+    margin: 0;
+    text-align: center;
+  }
+  
+  p {
+    font-size: medium;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text);
+  }
+  button a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  input {
+    background-color: var(--input-bg);
+    color: black;
+    margin: 10px 0;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  input::placeholder {
+    color: var(--form-bg);
+  }
+  
+  button {
+    border-radius: 8px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    background-color: var(--text);
+  }
+  
+  button:hover {
+    transform: scale(0.96);
+  }
+  
+  .loading-div {
+    width: 50px;
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6005a 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }
+  

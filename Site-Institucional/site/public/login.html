@@ -12,6 +12,7 @@
 
     <link rel="icon" href="./assets/icon/favicon2.ico">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -24,18 +25,16 @@
 
     <div class="header">
         <div class="container">
-            <h1 class="titulo">SojaTech</h1>
+            <a href="./index.html"><h1 class="titulo">SojaTech</h1></a>
             <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
+                <a href="./quem_somos.html">
+                    <li class="agora">Sobre nós</li>
+                </a>
                 <li>
                     <a href="./simulador.html">Simulador</a>
                 </li>
                 <li>|</li>
-                <li class="agora">
+                <li>
                     <a href="./login.html">Login</a>
                 </li>
                 <li>
@@ -45,7 +44,7 @@
         </div>
     </div>
 
-
+<!-- 
     <div class="banner">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
@@ -78,7 +77,45 @@
                 </div>
             </div>
         </div>
+    </div> 
+-->
+
+    <div class="corpo">
+        <div class="main">
+            <div class="form-img-login"></div>
+    
+            <div class="form-container-login">
+                <div class="form-header">
+                    <h3>Bem-vindo!</h3>
+                    <h3>Faça o seu Login:</h3>
+                </div>
+                <form>
+                    <input id="email_input" placeholder="Digite seu Email" />
+                    <input id="senha_input" placeholder="Digite sua Senha" type="password" />
+                    <button type="submit" form="form" value="Submit" onclick="entrar()">Continuar</button>
+                </form>
+                <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+    
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+    
+                <div class="mensagem-erro" id="mensagemErro">
+                    <div id="cardErro">
+                        <span id="mensagem_erro"></span>
+                        <div id="div_erros_login"></div>
+                    </div>
+                    <div id="cardErro2">
+                        <div id="div_erros_login"></div>
+                        <span id="mensagem_erro2"></span>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </div>
     </div>
+
 
     <!--footer inicio-->
     <div class="footer">
