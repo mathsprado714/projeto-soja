@@ -33,7 +33,7 @@ function entrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-        
+
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
@@ -66,6 +66,15 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var cpf = req.body.cpfServer;
     var senha = req.body.senhaServer;
+    var telefone1 = req.body.telefone1Server;
+    var telefone2 = req.body.telefone2Server;
+    var logradouro = req.body.logradouroServer;
+    var numero = req.body.numeroServer;
+    var complemento = req.body.complementoServer;
+    var bairro = req.body.bairroServer;
+    var cidade = req.body.cidadeServer;
+    var estado = req.body.estadoServer;
+    var cep = req.body.cepServer
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -74,12 +83,28 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (cpf == undefined) {
         res.status(400).send("Seu CPF está undefined!");
+    }else if (telefone1 == undefined) {
+        res.status(400).send("Seu telefone1 está undefined!");
+    }else if (logradouro == undefined) {
+        res.status(400).send("Seu logradouro está undefined!");
+    }else if (numero == undefined) {
+        res.status(400).send("Seu numero está undefined!");
+    }else if (complemento == undefined) {
+        res.status(400).send("Seu complemento está undefined!");
+    }else if (bairro == undefined) {
+        res.status(400).send("Seu bairro está undefined!");
+    }else if (cidade == undefined) {
+        res.status(400).send("Sua cidade está undefined!");
+    }else if (estado == undefined) {
+        res.status(400).send("Seu estado está undefined!");
+    }else if (cep == undefined) {
+        res.status(400).send("Seu cep está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, cpf, senha)
+        usuarioModel.cadastrar(nome, email, senha,cpf,telefone1,telefone2,logradouro,numero,complemento,bairro,cidade,estado,cep )
             .then(
                 function (resultado) {
                     res.json(resultado);

@@ -8,7 +8,7 @@ create table cliente(
 	nome varchar(45),
     email varchar(45),
     senha varchar(45),
-    cpfCnpj char(14),
+    cpf char(14),
     telefone1 char(12),
     telefone2 char(12),
     logradouro varchar(45),

@@ -13,7 +13,6 @@
 
 
     <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -27,7 +26,8 @@
     <div class="header">
         <div class="container">
             <a href="./index.html">
-                <h1 class="titulo">SojaTech</h1>
+                <h1 class="titulo"><img src="./assets/imgs/logo-soja.png"
+                        style="height: 40px;position: relative;left: 0.5em;top: 0.2em;"> SojaTech</h1>
             </a>
             <ul class="navbar">
                 <a href="./quem_somos.html">
@@ -47,52 +47,6 @@
         </div>
     </div>
     <!--header fim-->
-
-
-    <!-- <div class="banner ">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container tamanho-conteudo">
-            <div class="card medio">
-                <h2>Bem-vindo!</h2>
-                <div class="formulario"> -->
-
-    <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-
-    <!-- <span class="tipo_campo">Nome:</span>
-                    <input id="nome_input" type="text" placeholder="Seu nome">
-
-                    <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="meuemail@provedor.com">
-
-                    <span class="tipo_campo">CPF:</span>
-                    <input id="cpf_input" type="text" placeholder="000.000.000-00">
-
-                    <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
-
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
-
-                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
-
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="alerta_erro">
         <div class="card_erro" id="cardErro">
             <span id="mensagem_erro"></span>
@@ -102,29 +56,56 @@
     <div class="corpo">
         <div class="main">
             <div class="form-container-cadastro1" id="form_1">
-                <div class="form-header">
-                    <h3>Casdatro:</h3>
-                    <h3>Preecha os campos a baixo</h3>
-                </div>
                 <form>
-                    <span class="tipo_campo">Nome:</span>
-                    <input id="nome_input" type="text" placeholder="Seu nome">
+                    <div class="conteudo-scroll">
+                        <div class="form-header">
+                            <h3>Cadastro:</h3>
+                            <h3>Preecha os campos a baixo</h3>
+                        </div>
 
-                    <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="meuemail@provedor.com">
-
-                    <span class="tipo_campo">CPF:</span>
-                    <input id="cpf_input" type="text" placeholder="000.000.000-00">
-
-                    <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
-
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
-
-                    <button onclick="proxima()">Proxima</button>
+                        <span class="tipo_campo">Nome:</span>
+                        <input id="nome_input" type="text" placeholder="Seu nome">
+                        <span class="tipo_campo">E-mail:</span>
+                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                        <span class="tipo_campo">CPF:</span>
+                        <input id="cpf_input" type="text" placeholder="000.000.000-00">
+                        <span class="tipo_campo">Telefone:</span>
+                        <input id="telefone1_input" type="text" placeholder="(11)4002-8922">
+                        <span class="tipo_campo">Telefone2:</span>
+                        <input id="telefone2_input" type="text" placeholder="(11)4002-8922">
+                        <span class="tipo_campo">Logradouro:</span>
+                        <input id="logradouro_input" type="text" placeholder="rua">
+                        <span class="tipo_campo">Numero:</span>
+                        <input id="numero_input" type="text" placeholder="0000">
+                        <span class="tipo_campo">Complemento:</span>
+                        <input id="complemento_input" type="text" placeholder="Bloco X...">
+                        <span class="tipo_campo">Bairro:</span>
+                        <input id="bairro_input" type="text" placeholder="Vila Silviania">
+                        <span class="tipo_campo">Cidade:</span>
+                        <input id="Cidade_input" type="text" placeholder="São Paulo">
+                        <span class="tipo_campo">Estado:</span>
+                        <select id="sel_estado">
+                            <option value="">- Selecione um estado -</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="pr">Paraná</option>
+                            <option value="mt">Mato grosso</option>
+                            <option value="go">Goiás</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="ba">Bahia</option>
+                        </select><br>
+                        <span class="tipo_campo">CEP:</span>
+                        <input id="cep_input" type="text" placeholder="São Paulo">
+                        <span class="tipo_campo">Senha:</span>
+                        <input id="senha_input" type="password" placeholder="******">
+                        <span class="tipo_campo">Confirmação da Senha:</span>
+                        <input id="confirmacao_senha_input" type="password" placeholder="******">
+                        <button onclick="cadastrar()">Cadastrar</button>
+                        <p class="form-login">Já possui uma conta? <a href="login.html" class="btn-lgn">Logar</a></p>
+                    </div>
                 </form>
-                <p>Já possui uma conta? <a href="login.html">Logar</a></p>
                 <div id="div_aguardar" class="loading-div">
                     <!-- <img src="./assets/circle-loading.gif" id="loading-gif"> -->
                 </div>
@@ -132,7 +113,7 @@
             </div>
 
             <div class="form-img-cadastro"></div>
-            
+
             <div id="div_aguardar" class="loading-div">
                 <img src="./assets/circle-loading.gif" id="loading-gif">
             </div>
@@ -144,19 +125,19 @@
         </div>
     </div>
 
-    
-            <div class="form-img-cadastro">
 
-            </div>
-            <div id="div_aguardar" class="loading-div">
-                <img src="./assets/circle-loading.gif" id="loading-gif">
-            </div>
+    <div class="form-img-cadastro">
 
-            <div id="div_erros_login">
+    </div>
+    <div id="div_aguardar" class="loading-div">
+        <img src="./assets/circle-loading.gif" id="loading-gif">
+    </div>
 
-            </div>
+    <div id="div_erros_login">
 
-        </div>
+    </div>
+
+    </div>
     </div> -->
 
     <!--footer inicio-->
@@ -178,10 +159,6 @@
 </html>
 
 <script>
-    function proxima() {
-        form_1.style.display = "none"
-        form_2.style.display = "block"
-    }
     function cadastrar() {
         aguardar();
 
@@ -190,6 +167,15 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var cpfVar = cpf_input.value;
+        var telefone1Var = telefone1_input.value
+        var telefone2Var = telefone2_input.value
+        var logradouroVar = logradouro_input.value
+        var numeroVar = numero_input.value
+        var complementoVar = complemento_input.value
+        var bairroVar = bairro_input.value
+        var cidadeVar = Cidade_input.value
+        var estadoVar = sel_estado.value
+        var cepVar = cep_input.value
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
@@ -215,7 +201,16 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 cpfServer: cpfVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                telefone1Server: telefone1Var,
+                telefone2Server: telefone2Var,
+                logradouroServer: logradouroVar,
+                numeroServer: numeroVar,
+                complementoServer: complementoVar,
+                bairroServer: bairroVar,
+                cidadeServer: cidadeVar,
+                estadoServer: estadoVar,
+                cepServer: cepVar
             })
         }).then(function (resposta) {
 
