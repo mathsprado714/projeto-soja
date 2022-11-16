@@ -3,7 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family:sans-serif;
+  background-color: #303238;
 }
 
 .container {
@@ -13,13 +14,13 @@ body {
 }
 
 .header {
-  position: relative;
-  padding: 1%;
   display: flex;
-  width: 100%;
+  background-color: #303238;
+  padding: 0;
   border-bottom: 3px solid #75D390;
-  background-color: #383c42;
 }
+
+
 
 .header .container {
   justify-content: space-between;
@@ -27,11 +28,7 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #f1f1f1;
-}
-
-.agora {
-  font-weight: 800;
+  color: #fff;
 }
 
 .navbar {
@@ -40,16 +37,15 @@ body {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #f1f1f1;
+  color: #fff;
 }
 
 
 .titulo {
-  color: #f1f1f1;
-  width: fit-content;
+  color: #fff;
+  width: 5;
   font-weight: 500;
 }
-
 
 /* BANNER */
 
@@ -92,6 +88,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid #fff;
 }
 .simuladorC{
     display: flex;
@@ -119,19 +116,23 @@ body {
 }
 
 .footer {
-    background-color: #32b9cd;
-    height: 150px;
-    color: #fff;
-    display: flex;
-    font-size: 15px;
-  }
-  
-  .footer .container {
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .footer .container .version {
-    font-size: 12px;
-  }
+  background-color: #303238;
+  height: 150px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  border-top: 3px solid #75D390;
+}
+
+.footer .container {
+  justify-content: center;
+  text-align: center;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
+
+
+
   

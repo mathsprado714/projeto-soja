@@ -3,8 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  font-family:sans-serif;
+  background-color: #303238;
 }
 
 .container {
@@ -14,12 +14,15 @@ body {
 }
 
 .header {
-  position: fixed;
-  padding: 1%;
   display: flex;
+  background-color: #303238;
+  padding: 0;
+  position:fixed;
   width: 100%;
-  background-color: #383c4241;
+  border-bottom: 3px solid #75D390;
 }
+
+
 
 .header .container {
   justify-content: space-between;
@@ -27,11 +30,7 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
-}
-
-.agora {
-  font-weight: 800;
+  color: #fff;
 }
 
 .navbar {
@@ -40,16 +39,15 @@ body {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
+  color: #fff;
 }
 
 
 .titulo {
-  color: #32b9cd;
-  width: fit-content;
+  color: #fff;
+  width: 5;
   font-weight: 500;
 }
-
 
 /* BANNER */
 
@@ -126,11 +124,12 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #303238;
   height: 150px;
   color: #fff;
   display: flex;
   font-size: 15px;
+  border-top: 3px solid #75D390;
 }
 
 .footer .container {
@@ -141,7 +140,6 @@ body {
 .footer .container .version {
   font-size: 12px;
 }
-
 
 /* LOGIN */
 
