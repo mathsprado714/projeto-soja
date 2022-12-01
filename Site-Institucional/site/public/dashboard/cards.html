@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icon/logo-soja.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<body onload="">
 
     <div class="janela">
 
@@ -54,6 +54,7 @@
         </div>
 
         <div class="dash">
+            <h1>Temperatura</h1>
             <div class="regua">
                 <div class="item-regua perigo-frio">
                     <h4>Perigo</h4>
@@ -76,36 +77,71 @@
                     <h2>0°C</h2>
                 </div>
             </div>
+            <div class="regua">
+                <h1>Umidade</h1>
+                <div class="item-regua perigo-frio">
+                    <h4>Perigo</h4>
+                    <h2>0%</h2>
+                </div>
+                <div class="item-regua alerta-frio">
+                    <h4>Alerta</h4>
+                    <h2>0%</h2>
+                </div>
+                <div class="item-regua ideal">
+                    <h4>Ideal</h4>
+                    <h2>0%</h2>
+                </div>
+                <div class="item-regua alerta-quente">
+                    <h4>Alerta</h4>
+                    <h2>0%</h2>
+                </div>
+                <div class="item-regua perigo-quente">
+                    <h4>Perigo</h4>
+                    <h2>0%</h2>
+                </div>
+            </div>
 
             <div class="cards">
                 <div class="card">
-                    <h1>Silo 1</h1>
+                    <h1>Silo 1   /     Temperatura C°</h1>
                     <div class="temperatura">
-                        <p id="temp_aquario_1">-°C</p>
+                        <p>
+                            Porcentual de ideal: <span id="ideal_temp_aquario_1_maxima">0%</span><br>
+                            Temperatura maxima: <span id="temp_aquario_1_maxima">0°C</span><br>
+                            Temperatura minima: <span id="temp_silo_1_minima">0°C</span>
+                        </p>
                     </div>
-                    <div class="cor-alerta" id="card_1"></div>
                 </div>
                 <div class="card">
-                    <h1>Silo 2</h1>
+                    <h1>Silo 1 / Umidade %</h1>
                     <div class="temperatura">
-                        <p id="temp_aquario_2">-°C</p>
+                        <p>
+                            Porcentual de ideal: <span id="ideal_umidade_aquario_1_maxima">0%</span><br>
+                            Umidade maxima: <span id="umidade_aquario_1_maxima">0%</span><br>
+                            Umidade minima: <span id="umidade_silo_1_minima">0%</span>
+                        </p>
                     </div>
-                    <div class="cor-alerta" id="card_2"></div>
 
                 </div>
                 <div class="card">
-                    <h1>Silo 2</h1>
+                    <h1>Silo 2 / Temperatura °C</h1>
                     <div class="temperatura">
-                        <p id="temp_aquario_3">-°C</p>
+                        <p>
+                            Porcentual de ideal: <span id="ideal_temp_aquario_1_maxima">0%</span><br>
+                            Temperatura maxima: <span id="temp_aquario_21_maxima">Desativado</span><br>
+                            Temperatura minima: <span id="temp_silo_2_minima">Desativado</span>
+                        </p>
                     </div>
-                    <div class="cor-alerta ideal" id="card_3"></div>
                 </div>
                 <div class="card">
-                    <h1>Silo 3</h1>
+                    <h1>Silo 2 / Umidade %</h1>
                     <div class="temperatura">
-                        <p id="temp_aquario_4">-°C</p>
+                        <p>
+                            Porcentual de ideal: <span id="ideal_umidade_aquario_1_maxima">Desativado</span><br>
+                            Umidade maxima: <span id="umidade_aquario_21_maxima">Desativado</span><br>
+                            Umidade minima: <span id="umidade_silo_2_minima">Desativado</span>
+                        </p>
                     </div>
-                    <div class="cor-alerta" id="card_4"></div>
                 </div>
 
             </div>
@@ -118,7 +154,7 @@
 
 <script>
 
-    b_usuario.innerHTML = sessionStorage.ID_NOTA
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     
     function atualizacaoPeriodica() {
         obterdados(1);
@@ -138,8 +174,8 @@
         setTimeout(atualizacaoPeriodica, 5000);
     }
 
-    function obterdados(idAquario) {
-        fetch(`/medidas/tempo-real/${idAquario}`)
+    function obterdados(idArmazem) {
+        fetch(`/medidas/tempo-real/${idArmazem}`)
             .then(resposta => {
 
                 if (resposta.ok) {
@@ -151,7 +187,7 @@
                             temperatura: resposta[0].temperatura,
                         }
 
-                        alertar(resposta[0].temperatura, idAquario);
+                        alertar(resposta[0].temperatura, idArmazem);
                     });
                 } else {
 
@@ -164,7 +200,7 @@
 
     }
 
-    function alertar(temperatura, idAquario) {
+    function alertar(temperatura, idArmazem) {
         var limites = {
             muito_quente: 23,
             quente: 22,
@@ -198,16 +234,16 @@
 
         var card;
 
-        if (idAquario == 1) {
-            temp_aquario_1.innerHTML = temperatura + "°C";
+        if (idArmazem== 1) {
+            temp_aquario_1_maxima.innerHTML = temperatura + "°C";
             card = card_1
-        } else if (idAquario == 2) {
+        } else if (idArmazem== 2) {
             temp_aquario_2.innerHTML = temperatura + "°C";
             card = card_2
-        } else if (idAquario == 3) {
+        } else if (idArmazem== 3) {
             temp_aquario_3.innerHTML = temperatura + "°C";
             card = card_3
-        } else if (idAquario == 4) {
+        } else if (idArmazem== 4) {
             temp_aquario_4.innerHTML = temperatura + "°C";
             card = card_4
         }
