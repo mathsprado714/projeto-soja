@@ -85,7 +85,7 @@ body {
   padding: 20px;
 }
 
-.publicacao > *:not(:last-child) {
+.publicacao>*:not(:last-child) {
   padding: 0 0 10px 0;
 }
 
@@ -104,7 +104,7 @@ body {
   justify-content: flex-end;
 }
 
-.div-buttons > * {
+.div-buttons>* {
   margin-left: 30px;
 }
 
@@ -133,12 +133,27 @@ body {
 }
 
 
+.titulo-regua {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  border: 4px solid #000;
+  border-style: outset;
+  background-color: #212124;
+  border-radius: 12px;
+  position: relative;
+  left: 1em;
+  border: 4px solid #25b34d;
+  box-shadow: 0px 1px 15px 10px #000;
+}
+
 .regua {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   margin-top: 30px;
+
 }
 
 .perigo-frio {
@@ -167,6 +182,9 @@ body {
   margin: 5px;
   text-align: center;
   padding-top: 15px;
+  border-radius: 100%;
+  border: 4px solid #25b34d;
+  box-shadow: 0px 1px 15px 10px #000;
 }
 
 .cards {
@@ -189,7 +207,8 @@ body {
   justify-content: right;
   background-color: #75D390;
   font-size: 20px;
-  border: 4px solid #fff;
+  border: 4px solid #25b34d;
+  box-shadow: 0px 1px 15px 10px #000;
 }
 
 
@@ -209,10 +228,11 @@ body {
   width: 75%;
 }
 
-.card p{
-position:relative;
-right: 3em;
+.card p {
+  position: relative;
+  right: 3em;
 }
+
 .btns-dash {
   display: flex;
   align-items: center;
