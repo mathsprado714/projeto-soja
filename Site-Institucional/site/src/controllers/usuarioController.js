@@ -75,6 +75,7 @@ function cadastrar(req, res) {
     var cidade = req.body.cidadeServer;
     var estado = req.body.estadoServer;
     var cep = req.body.cepServer
+    var orcamento = req.body.orcamentoServer
 
     // Faça as validações dos valores
     if (nome == undefined) {

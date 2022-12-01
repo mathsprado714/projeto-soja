@@ -19,25 +19,32 @@ create table cliente(
     cep char(8)
 );
 
-create table orcamento(
-	idOrcamento int auto_increment,
-    valorTotal decimal(10,2),
-    fkCliente int,
-    foreign key (fkCliente) references cliente(idCliente),
-    primary key (idOrcamento, fkCliente)
+create table pacote(
+	idPacote int primary key auto_increment,
+    nomePacote varchar(45),
+    descricao varchar(255),
+    valorTotal decimal(10,2)
 );
 
-create table armazem(
-	idArmazem int primary key auto_increment,
-    logradouro varchar(45),
-    numero varchar(45),
-    bairro varchar(45),
-    cidade varchar(45),
-    estado varchar(45),
-    cep char(8),
-    fkClienteA int,
-    foreign key (fkClienteA) references cliente(idCliente)
+create table pacoteCliente(
+	fkPacote int,
+    fkCliente int,
+    foreign key (fkPacote) references pacote(idPacote),
+    foreign key (fkCliente) references cliente(idCliente),
+    primary key (fkPacote, fkCliente)
 );
+##create table armazem(
+##	idArmazem int primary key auto_increment,
+##    logradouro varchar(45),
+##    numero varchar(45),
+##    bairro varchar(45),
+##    cidade varchar(45),
+##    estado varchar(45),
+##    cep char(8),
+##    fkClienteA int,
+##    foreign key (fkClienteA) references cliente(idCliente)
+##);
+
 
 
 create table funcionario(
@@ -153,6 +160,7 @@ update funcionario set fkSupervisor = null where idFuncionario = 1;
 update funcionario set fkSupervisor = 1 where idFuncionario = 2;
 update funcionario set fkSupervisor = 1 where idFuncionario = 3;
 
+-- Select 
 select c.*,a.*,f.*
 	from cliente c join armazem a
 		on a.fkClienteA = c.idCliente
@@ -172,6 +180,7 @@ select c.*,a.*,f.*
 			join funcionario f
 				on f.fkArmazemF = a.idArmazem
 					where c.idCliente = 1;
+                    
                     
 select f.nome, s.nome from funcionario f join funcionario s on f.idFuncionario = s.fkSupervisor;
 
