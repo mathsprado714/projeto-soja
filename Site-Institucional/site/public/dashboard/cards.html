@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="">
+<body onload="maxima()">
 
     <div class="janela">
 
@@ -103,11 +103,11 @@
 
             <div class="cards">
                 <div class="card">
-                    <h1>Silo 1   /     Temperatura C°</h1>
+                    <h1>Silo 1 / Temperatura C°</h1>
                     <div class="temperatura">
                         <p>
-                            Porcentual de ideal: <span id="ideal_temp_aquario_1_maxima">0%</span><br>
-                            Temperatura maxima: <span id="temp_aquario_1_maxima">0°C</span><br>
+                            Porcentual de ideal: <span id="ideal_temp_silo_1_maxima">0%</span><br>
+                            Temperatura maxima: <span id="temp_silo_1_maxima">0°C</span><br>
                             Temperatura minima: <span id="temp_silo_1_minima">0°C</span>
                         </p>
                     </div>
@@ -116,8 +116,8 @@
                     <h1>Silo 1 / Umidade %</h1>
                     <div class="temperatura">
                         <p>
-                            Porcentual de ideal: <span id="ideal_umidade_aquario_1_maxima">0%</span><br>
-                            Umidade maxima: <span id="umidade_aquario_1_maxima">0%</span><br>
+                            Porcentual de ideal: <span id="ideal_umidade_silo_1_maxima">0%</span><br>
+                            Umidade maxima: <span id="umidade_silo_1_maxima">0%</span><br>
                             Umidade minima: <span id="umidade_silo_1_minima">0%</span>
                         </p>
                     </div>
@@ -127,8 +127,8 @@
                     <h1>Silo 2 / Temperatura °C</h1>
                     <div class="temperatura">
                         <p>
-                            Porcentual de ideal: <span id="ideal_temp_aquario_1_maxima">0%</span><br>
-                            Temperatura maxima: <span id="temp_aquario_21_maxima">Desativado</span><br>
+                            Porcentual de ideal: <span id="ideal_temp_silo_1_maxima">0%</span><br>
+                            Temperatura maxima: <span id="temp_silo_21_maxima">Desativado</span><br>
                             Temperatura minima: <span id="temp_silo_2_minima">Desativado</span>
                         </p>
                     </div>
@@ -137,8 +137,8 @@
                     <h1>Silo 2 / Umidade %</h1>
                     <div class="temperatura">
                         <p>
-                            Porcentual de ideal: <span id="ideal_umidade_aquario_1_maxima">Desativado</span><br>
-                            Umidade maxima: <span id="umidade_aquario_21_maxima">Desativado</span><br>
+                            Porcentual de ideal: <span id="ideal_umidade_silo_1_maxima">Desativado</span><br>
+                            Umidade maxima: <span id="umidade_silo_21_maxima">Desativado</span><br>
                             Umidade minima: <span id="umidade_silo_2_minima">Desativado</span>
                         </p>
                     </div>
@@ -155,7 +155,7 @@
 <script>
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
+
     function atualizacaoPeriodica() {
         obterdados(1);
         obterdados(2);
@@ -163,14 +163,14 @@
         obterdados(4);
 
         function sendData() {
-			var http = new XMLHttpRequest();
-			http.open('POST', 'http://localhost:3000/api/sendData', false);
-			http.send(null);
-		}
+            var http = new XMLHttpRequest();
+            http.open('POST', 'http://localhost:3000/api/sendData', false);
+            http.send(null);
+        }
 
         setInterval(() => {
-			sendData();
-		}, 2000);
+            sendData();
+        }, 2000);
         setTimeout(atualizacaoPeriodica, 5000);
     }
 
@@ -195,7 +195,7 @@
                 }
             })
             .catch(function (error) {
-                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+                console.error(`Erro na obtenção dos dados do silo p/ gráfico: ${error.message}`);
             });
 
     }
@@ -234,22 +234,62 @@
 
         var card;
 
-        if (idArmazem== 1) {
+        if (idArmazem == 1) {
             temp_aquario_1_maxima.innerHTML = temperatura + "°C";
             card = card_1
-        } else if (idArmazem== 2) {
+        } else if (idArmazem == 2) {
             temp_aquario_2.innerHTML = temperatura + "°C";
             card = card_2
-        } else if (idArmazem== 3) {
+        } else if (idArmazem == 3) {
             temp_aquario_3.innerHTML = temperatura + "°C";
             card = card_3
-        } else if (idArmazem== 4) {
+        } else if (idArmazem == 4) {
             temp_aquario_4.innerHTML = temperatura + "°C";
             card = card_4
         }
 
         // alterando
         card.className = classe_temperatura;
+
+    }
+
+    function maxima() {
+        // Temperatura
+
+        temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_MAXIMA_USUARIOS
+        ideal_temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_IDEAL_USUARIOS
+        temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
+
+        // Umidade
+        umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
+        umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
+        ideal_umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_IDEAL_USUARIOS
+        
+        
+
+
+        fetch(`/usuarios/maxima`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    var json = JSON.stringify(resposta);
+                    console.log(resposta[0].maxima_temperatura, resposta[0].maxima_temperatura, resposta[0].minima_temperatura, resposta[0].maxima_umidade, resposta[0].minima_umidade, resposta[0].temperatura_ideal, resposta[0].umidade_ideal);
+                    sessionStorage.TEMPERATURA_MAXIMA_USUARIOS = resposta[0].maxima_temperatura
+                    sessionStorage.TEMPERATURA_MINIMA_USUARIOS = resposta[0].minima_temperatura
+
+                    sessionStorage.UMIDADE_MAXIMA_USUARIOS = resposta[0].maxima_umidade
+                    sessionStorage.UMIDADE_MINIMA_USUARIOS = resposta[0].minima_umidade
+
+                    sessionStorage.TEMPERATURA_IDEAL_USUARIOS = resposta[0].temperatura_ideal
+                    sessionStorage.UMIDADE_IDEAL_USUARIOS = resposta[0].umidade_ideal
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
 
     }
 
