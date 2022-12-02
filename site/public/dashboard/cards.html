@@ -154,6 +154,14 @@
 
 <script>
 
+    window.onload = maxima()
+    temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_MAXIMA_USUARIOS
+    //  ideal_temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_IDEAL_USUARIOS
+    //  temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
+
+    //  umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
+    //  umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
+    //  ideal_umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_IDEAL_USUARIOS
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function atualizacaoPeriodica() {
@@ -257,15 +265,15 @@
         // Temperatura
 
         temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_MAXIMA_USUARIOS
-        ideal_temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_IDEAL_USUARIOS
-        temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
+        //  ideal_temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_IDEAL_USUARIOS
+        //  temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
 
-        // Umidade
-        umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
-        umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
-        ideal_umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_IDEAL_USUARIOS
-        
-        
+        //  Umidade
+        // umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
+        // umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
+        // ideal_umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_IDEAL_USUARIOS
+
+
 
 
         fetch(`/usuarios/maxima`, { cache: 'no-store' }).then(function (response) {
@@ -273,15 +281,8 @@
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     var json = JSON.stringify(resposta);
-                    console.log(resposta[0].maxima_temperatura, resposta[0].maxima_temperatura, resposta[0].minima_temperatura, resposta[0].maxima_umidade, resposta[0].minima_umidade, resposta[0].temperatura_ideal, resposta[0].umidade_ideal);
+                    console.log(resposta[0].maxima_temperatura);
                     sessionStorage.TEMPERATURA_MAXIMA_USUARIOS = resposta[0].maxima_temperatura
-                    sessionStorage.TEMPERATURA_MINIMA_USUARIOS = resposta[0].minima_temperatura
-
-                    sessionStorage.UMIDADE_MAXIMA_USUARIOS = resposta[0].maxima_umidade
-                    sessionStorage.UMIDADE_MINIMA_USUARIOS = resposta[0].minima_umidade
-
-                    sessionStorage.TEMPERATURA_IDEAL_USUARIOS = resposta[0].temperatura_ideal
-                    sessionStorage.UMIDADE_IDEAL_USUARIOS = resposta[0].umidade_ideal
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
