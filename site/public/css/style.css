@@ -78,7 +78,7 @@ body {
   font-size: 36px;
 }
 
-.banner .container span {
+.banner .container b {
   font-weight: 800;
 }
 
@@ -100,6 +100,9 @@ body {
 .social .container .boxes {
   display: flex;
 }
+.container{
+  justify-content: space-between;
+}
 
 .social p {
   text-align: center;
@@ -118,6 +121,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.box p{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 
