@@ -29,7 +29,8 @@ function minimaUmidade() {
 function percentualIdeal() {
     console.log("ACESSEI O usuario MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        SELECT avg(dht11_temperatura)/15*100 as 'percentual_ideal' from medida;
+    select truncate(count(q.dht11_temperatura) / t.total * 100,2) as 'percentual_ideal' from medida q , (select count(dht11_temperatura) as total from medida) t where dht11_temperatura = 15;
+
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -38,8 +39,7 @@ function percentualIdeal() {
 function percentualIdealUmid() {
     console.log("ACESSEI O usuario MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        SELECT avg(dht11_temperatura)/11*100 as 'percentual_ideal' from medida;
-    `;
+    select truncate(count(q.dht11_umidade) / t.total * 100,2) as 'percentual_ideal_umid' from medida q , (select count(dht11_umidade) as total from medida) t where dht11_umidade = 11;    `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }

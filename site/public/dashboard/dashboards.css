@@ -200,6 +200,7 @@ body {
 .card {
   margin: 2%;
   width: 40%;
+  border-radius: 12px;
   flex-wrap: wrap;
   display: flex;
   text-align: center;
