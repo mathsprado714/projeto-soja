@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="maxima()">
+<body onload="maxima(),minima(),maximaUmidade(),minimaUmidade()">
 
     <div class="janela">
 
@@ -127,7 +127,7 @@
                     <h1>Silo 2 / Temperatura °C</h1>
                     <div class="temperatura">
                         <p>
-                            Porcentual de ideal: <span id="ideal_temp_silo_1_maxima">0%</span><br>
+                            Porcentual de ideal: <span id="ideal_temp_silo_1_maxima">Desativado</span><br>
                             Temperatura maxima: <span id="temp_silo_21_maxima">Desativado</span><br>
                             Temperatura minima: <span id="temp_silo_2_minima">Desativado</span>
                         </p>
@@ -154,16 +154,16 @@
 
 <script>
 
-    window.onload = maxima()
+    window.onload = maxima(),menor(),maximaUmidade(),minimaUmidade()
     temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_MAXIMA_USUARIOS
+    temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
     //  ideal_temp_silo_1_maxima.innerHTML = sessionStorage.TEMPERATURA_IDEAL_USUARIOS
-    //  temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
 
-    //  umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
-    //  umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
+     umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
+     umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
     //  ideal_umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_IDEAL_USUARIOS
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
+    
     function atualizacaoPeriodica() {
         obterdados(1);
         obterdados(2);
@@ -293,6 +293,72 @@
             });
 
     }
+
+    function menor() {
+        // Temperatura
+        temp_silo_1_minima.innerHTML = sessionStorage.TEMPERATURA_MINIMA_USUARIOS
+
+
+
+        fetch(`/usuarios/menor`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    var json = JSON.stringify(resposta);
+                    console.log(resposta[0].minima_temperatura);
+                    sessionStorage.TEMPERATURA_MINIMA_USUARIOS = resposta[0].minima_temperatura
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    function maximaUmidade() {
+        umidade_silo_1_maxima.innerHTML = sessionStorage.UMIDADE_MAXIMA_USUARIOS
+        fetch(`/usuarios/maximaUmidade`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    var json = JSON.stringify(resposta);
+                    console.log(resposta[0].maxima_umidade);
+                    sessionStorage.UMIDADE_MAXIMA_USUARIOS = resposta[0].maxima_umidade
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+        function minimaUmidade() {
+        umidade_silo_1_minima.innerHTML = sessionStorage.UMIDADE_MINIMA_USUARIOS
+        fetch(`/usuarios/minimaUmidade`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    var json = JSON.stringify(resposta);
+                    console.log(resposta[0].minima_umidade);
+                    sessionStorage.UMIDADE_MINIMA_USUARIOS = resposta[0].minima_umidade
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+
 
 </script>
 

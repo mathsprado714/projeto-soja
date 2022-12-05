@@ -15,6 +15,18 @@ router.get("/maxima", function (req, res) {
     usuarioController.maxima(req, res);
 });
 
+router.get("/menor", function (req, res) {
+    usuarioController.menor(req, res);
+});
+
+router.get("/maximaUmidade", function (req, res) {
+    usuarioController.maximaUmidade(req, res);
+});
+
+router.get("/minimaUmidade", function (req, res) {
+    usuarioController.minimaUmidade(req, res);
+});
+
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
