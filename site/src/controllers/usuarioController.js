@@ -92,6 +92,40 @@ function minimaUmidade(req, res) {
         );
 }
 
+function percentualIdeal(req, res) {
+    usuarioModel.percentualIdeal()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function percentualIdealUmid(req, res) {
+    usuarioModel.percentualIdealUmid()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 function entrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -143,7 +177,6 @@ function cadastrar(req, res) {
     var cidade = req.body.cidadeServer;
     var estado = req.body.estadoServer;
     var cep = req.body.cepServer
-    var orcamento = req.body.orcamentoServer
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -200,4 +233,6 @@ module.exports = {
     menor,
     maximaUmidade,
     minimaUmidade,
+    percentualIdeal,
+    percentualIdealUmid,
 }
