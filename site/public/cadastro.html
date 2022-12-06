@@ -72,16 +72,18 @@
                         <input id="telefone1_input" type="text" placeholder="(11)4002-8922">
                         <span class="tipo_campo">Telefone2:</span>
                         <input id="telefone2_input" type="text" placeholder="(11)4002-8922">
+                        <span class="tipo_campo">CEP:</span>
+                        <input id="cep_input" type="text" placeholder="São Paulo" onchange="consultaEndereco(),completarEndereco()">
                         <span class="tipo_campo">Logradouro:</span>
                         <input id="logradouro_input" type="text" placeholder="rua">
-                        <span class="tipo_campo">Numero:</span>
-                        <input id="numero_input" type="text" placeholder="0000">
-                        <span class="tipo_campo">Complemento:</span>
-                        <input id="complemento_input" type="text" placeholder="Bloco X...">
                         <span class="tipo_campo">Bairro:</span>
                         <input id="bairro_input" type="text" placeholder="Vila Silviania">
                         <span class="tipo_campo">Cidade:</span>
                         <input id="Cidade_input" type="text" placeholder="São Paulo">
+                        <span class="tipo_campo">Numero:</span>
+                        <input id="numero_input" type="text" placeholder="0000">
+                        <span class="tipo_campo">Complemento:</span>
+                        <input id="complemento_input" type="text" placeholder="Bloco X...">
                         <span class="tipo_campo">Estado:</span>
                         <select id="sel_estado">
                             <option value="">- Selecione um estado -</option>
@@ -95,8 +97,6 @@
                             <option value="mg">Minas Gerais</option>
                             <option value="ba">Bahia</option>
                         </select><br>
-                        <span class="tipo_campo">CEP:</span>
-                        <input id="cep_input" type="text" placeholder="São Paulo">
                         <span class="tipo_campo">Senha:</span>
                         <input id="senha_input" type="password" placeholder="******">
                         <span class="tipo_campo">Confirmação da Senha:</span>
@@ -104,6 +104,7 @@
                         <button onclick="cadastrar()">Cadastrar</button>
                         <p class="form-login">Já possui uma conta? <a href="login.html" class="btn-lgn">Logar</a></p>
                     </div>
+                    <script> src="./js/script.js"</script>
                 </form>
                 <div id="div_aguardar" class="loading-div">
                     <!-- <img src="./assets/circle-loading.gif" id="loading-gif"> -->
@@ -178,6 +179,39 @@
 </html>
 
 <script>
+
+        function consultaEndereco(){
+           let cep = document.querySelector('#cep_input').value
+
+           if(cep.length != 8){
+            alert('CEP invalido!');
+            return;
+        }
+
+            let url = `https://viacep.com.br/ws/${cep}/json/`;
+
+            fetch(url).then(function(response){
+                response.json().then(function(data){
+                    console.log(data) 
+                });
+            });
+
+            fetch(url).then(function(response){
+                response.json().then(completarEndereco);
+            });
+
+
+        }
+
+        function completarEndereco(dados){
+            if(dados.erro){
+                alert('Não foi possivel encontrar o endereço!')
+            } else {
+            logradouro_input.value = dados.logradouro
+            bairro_input.value = dados.bairro
+            Cidade_input.value = dados.localidade
+            }
+        }
     function cadastrar() {
         aguardar();
 
