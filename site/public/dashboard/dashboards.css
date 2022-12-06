@@ -234,6 +234,13 @@ body {
   right: 3em;
 }
 
+.cor-alerta {
+  width: 8%;
+  height: 20px;
+  border-radius: 50px;
+  margin-top: 6%;
+}
+
 .btns-dash {
   display: flex;
   align-items: center;
