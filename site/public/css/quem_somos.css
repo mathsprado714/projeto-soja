@@ -255,4 +255,126 @@ footer img {
   width: 10%;
 }
   
-  
+.corpoQS {
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  height: 100vh;
+  margin-top: 10vh;
+
+}
+
+.corpoQS2 {
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  margin-top: 10vh;
+
+}
+
+.corpoQS3 {
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  height: 100vh;
+  margin-top: 10vh;
+
+}
+
+.mainQS {
+  display: flex;
+  position:relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  border-radius: 20px;
+  bottom: 2em;
+} 
+
+.mainQS2 {
+  display: flex;
+  position:relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  border-radius: 20px;
+  bottom: 2em;
+} 
+
+.mainQS3 {
+  display: flex;
+  position:relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  border-radius: 20px;
+  bottom: 2em;
+} 
+
+.form-img-cadastroQS {
+  flex-grow: 1;
+  background-image: url("../assets/imgs/qs1.jpg");
+  background-size: cover;
+  background-position: right;
+  border-radius: 12px;
+  width: 150%;
+}
+
+.form-img-cadastroQS2 {
+  flex-grow: 1;
+  background-image: url("../assets/imgs/qs2.jpg");
+  background-size: cover;
+  background-position: right;
+  border-radius: 12px;
+  width: 150%;
+}
+
+.form-img-cadastroQS3 {
+  flex-grow: 1;
+  background-image: url("../assets/imgs/qs3.jpeg");
+  background-size: cover;
+  background-position: right;
+  border-radius: 12px;
+  width: 80%;
+}
+
+.conteudo-scroll {
+  display: flex;
+  position: relative;
+
+  height: 15.0em;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 11em;
+  background-color: var(--form-bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+
+
+.form-container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 150px;
+  background-color: var(--form-bg);
+  color: var(--text);
+  /* width: 19%; */
+}
+
