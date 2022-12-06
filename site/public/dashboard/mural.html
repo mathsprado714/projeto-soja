@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SojaTech Avisos</title>
+    <title>AquaTech | Avisos</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./dashboards.css">
@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="" style="background-color: #161618;">
+<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
     <!-- <body onload="validarSessao()"> -->
 
     <div class="janela">
@@ -26,7 +26,7 @@
 
         <div class="header-left">
 
-            <h1>SojaTech</h1>
+            <h1>AquaTech</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -34,7 +34,7 @@
 
             <div class="btn-nav-white">
                 <a href="cards.html">
-                    <h3>Silos</h3>
+                    <h3>Aquários</h3>
                 </a>
             </div>
 
@@ -58,11 +58,11 @@
 
             <div class="avisos">
                 <div class="container">
-                    <h1>Suporte</h1>
+                    <h1>Publicar um aviso</h1>
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
-                                Assunto:
+                                Título:
                                 <br>
                                 <input name="titulo" id="titulo" maxlength="100" type="text">
                             </label>
@@ -76,7 +76,7 @@
                             <button>Enviar</button>
                         </form>
                     </div>
-                    <h1>Mural de chamados</h1>
+                    <h1>Mural de Avisos</h1>
                     <div class="div-results">
                         <div id="feed_container" class="feed-container">
                         </div>
