@@ -117,7 +117,7 @@
                             Temperatura minima: <span id="temp_silo_1_minima">0°C</span>
                         </p>
                     </div>
-                    <div class="cor-alerta"></div>
+                    <div class="cor-alerta" id="cor_alerta"></div>
                 </div>
                 <div class="card">
                     <h1>Silo 1 / Umidade %</h1>
@@ -135,11 +135,11 @@
                     <div class="temperatura">
                         <p>
                             Porcentual de ideal: <span id="ideal_temp_silo_2_maxima">Desativado</span><br>
-                            Temperatura maxima: <span id="temp_silo_21_maxima">Desativado</span><br>
+                            Temperatura maxima: <span id="temp_silo_2_maxima">Desativado</span><br>
                             Temperatura minima: <span id="temp_silo_2_minima">Desativado</span>
                         </p>
                     </div>
-                    <div class="cor-alerta"></div>
+                    <div class="cor-alerta" id="cor_alerta"></div>
                 </div>
                 <div class="card">
                     <h1>Silo 2 / Umidade %</h1>
@@ -221,23 +221,23 @@
         var classe_temperatura = 'cor-alerta';
 
         if (temperatura >= limites.muito_quente) {
-            classe_temperatura = 'cor-alerta perigo-quente';
+            cor_alerta.style.backgroundcolor = "red";
             console.log("caiu no 1")
         }
         else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
-            classe_temperatura = 'cor-alerta alerta-quente';
+            cor_alerta.style.backgroundcolor = "yellow";
             console.log("caiu no 2")
         }
         else if (temperatura < limites.quente && temperatura > limites.frio) {
-            classe_temperatura = 'cor-alerta ideal';
+            cor_alerta.style.backgroundcolor = "green";
             console.log("caiu no 3")
         }
         else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
-            classe_temperatura = 'cor-alerta alerta-frio';
+            cor_alerta.style.backgroundcolor = "yellow";
             console.log("caiu no 4")
         }
         else if (temperatura < limites.min_temperatura) {
-            classe_temperatura = 'cor-alerta perigo-frio';
+            cor_alerta.style.backgroundcolor = "red";
             console.log("caiu no 5")
         }
 
@@ -256,9 +256,6 @@
             temp_aquario_4.innerHTML = temperatura + "°C";
             card = card_4
         }
-
-        // alterando
-        card.className = classe_temperatura;
 
     }
 
