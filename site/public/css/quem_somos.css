@@ -232,7 +232,7 @@ footer img {
   background-size: cover;
   background-position: right;
   border-radius: 12px;
-  width: 150%;
+  width: 120%;
 }
 
 .form-img-cadastroQS2 {
@@ -241,7 +241,7 @@ footer img {
   background-size: cover;
   background-position: right;
   border-radius: 12px;
-  width: 150%;
+  width: 120%;
 }
 
 .form-img-cadastroQS3 {
@@ -250,24 +250,22 @@ footer img {
   background-size: cover;
   background-position: right;
   border-radius: 12px;
-  width: 80%;
+  width: 0%;
 }
 
 .conteudo-scroll {
   display: flex;
   position: relative;
-
+  
   height: 15.0em;
   flex-direction: column;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 11em;
+  padding: 10em;
   background-color: var(--form-bg);
   color: var(--text);
   font-family: sans-serif;
 }
-
-
 
 .form-container-login {
   display: flex;
