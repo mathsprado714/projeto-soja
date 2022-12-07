@@ -52,8 +52,16 @@ body {
 .banner {
   padding: 15em 0;
   color: white;
-  background-image: url("../assets/imgs/WhatsApp\ Image\ 2022-09-20\ at\ 21.03.31.jpeg");
   background-size: cover;
+  background-image: url(../assets/imgs/WhatsApp\ Image\ 2022-09-20\ at\ 21.03.31.jpeg);
+  display: flex;
+  width: 94%;
+  height: 100%;
+  max-width: 1300px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  border-radius: 20px;
+  bottom: 2em;
 }
 
 .banner .container {
@@ -81,14 +89,21 @@ body {
 
 .simuladorBOX{
     background-color: #383c42;
-    padding: 5em;
-    border-radius: 10px;
-    margin-top:5em;
+    padding: 2em;
+    height: 420px;
+    border-radius: 30px;
+    margin-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
+}
+
+.btn1{
+  background-color: green;
+  font-size: medium;
+  
 }
 .simuladorC{
     display: flex;
@@ -203,4 +218,33 @@ footer img {
   width: 10%;
 }
 
+.corpoQS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg);
+  height: 120vh;
+  margin-top: 10vh;
+
+}
+
+.mainQS {
+  display: flex;
+  width: 94%;
+  height: 100%;
+  max-width: 1300px;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  border-radius: 20px;
+  bottom: 2em;
+  background-image: url("../assets/imgs/WhatsApp\ Image\ 2022-09-20\ at\ 21.03.31.jpeg");
+} 
+
+.form-img-cadastroQS {
+  flex-grow: 1;
+  background-size: cover;
+  background-position: right;
+  border-radius: 20px;
+
+}
   
