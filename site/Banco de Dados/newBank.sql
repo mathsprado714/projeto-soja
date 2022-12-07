@@ -1,5 +1,5 @@
 use soja;
-drop database soja;
+drop table clienteOrcamento;
 create database soja;
 
 select truncate(count(q.dht11_temperatura) / t.total * 100,2) as perc from medida q , (select count(dht11_temperatura) as total from medida) t where dht11_temperatura = 15;
@@ -21,7 +21,7 @@ insert into medida (dht11_temperatura) values
 (15),
 (17);
 select * from medida;
-select * from orcamento;
+select * from clienteOrcamento;
 
 insert into orcamento(valorTotal, descricao)value
 	(230, '1 Sensor sem instalação inclusa'),
@@ -66,9 +66,10 @@ create table clienteOrcamento(
     fkOrcamentoO int,
     foreign key (fkCliente) references usuario(id),
     foreign key (fkOrcamentoO) references orcamento(idOrcamento),
-    primary key (fkCliente, fkOrcamentoO)
+    primary key (fkCliente, fkOrcamentoO)    
 );
 
+select * from clienteOrcamento;
 -- Tabelas no SQL Server
 
 

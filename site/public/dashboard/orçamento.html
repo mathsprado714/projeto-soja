@@ -68,17 +68,17 @@
         <div class="dash">
             <h1 class="titulo-regua">Temperatura</h1>
 
-        <div class="cards">
-            <div class="card">
-                <h4>Selecione a quantidade de sensores</h4>
-                <select name="" id="sel_sensor">
+        <div class="cards1">
+            <div class="card1">
+                <h4 class="selc">Selecione a quantidade de sensores</h4>
+                <select name="" id="sel_sensor" class="button">
                     <option value="">--Escolha--</option>
                     <option value="1">1 Sensor</option>
                     <option value="2">2 Sensores</option>
                     <option value="3">3+ A combinar</option>
                 </select>
                 <br>
-                <button onclick="orcamento()">Salvar o Orçamento</button>
+                <button onclick="orcamento()" class="button">Salvar o Orçamento</button>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
             //     alert('A PONTUAÇÃO DEVE SER MENOR QUE 100!')
             //     return false;
             else {
-                alert('Nota Cadastrada com sucesso!')
+                alert('Orçamento Cadastrado com sucesso! A equipe SojaTech entrará em contato em breve!')
             //     setInterval(sumirMensagem, 5000)
             }
         
@@ -146,7 +146,7 @@
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
+            // console.log(`#ERRO: ${resposta}`);
             // finalizarAguardar();
         });
 
