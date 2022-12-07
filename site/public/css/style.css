@@ -363,8 +363,8 @@ input {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #75D390;
-  background-color: #212124;
+  box-shadow: 2px 0px 10px 15px #093d12;
+  background-color: #093d12;
   /* border: 3px solid pink; */
 }
 
