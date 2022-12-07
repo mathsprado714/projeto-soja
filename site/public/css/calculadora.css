@@ -90,21 +90,16 @@ body {
 .simuladorBOX{
     background-color: #383c42;
     padding: 2em;
-    height: 420px;
+    height: 450px;
     border-radius: 30px;
     margin-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #fff;
+    box-shadow: 0px 1px 10px 5px #75D390;
 }
 
-.btn1{
-  background-color: green;
-  font-size: medium;
-  
-}
 .simuladorC{
     display: flex;
     flex-direction: column;
@@ -248,3 +243,27 @@ footer img {
 
 }
   
+button {
+  background-color: #75D390;
+  width: 100%;
+  height: 25px;
+  border: 0;
+  outline: 0;
+  border-radius: 12px;
+  margin-top: 2%;
+  font-weight: 100%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover{
+  background-color: #ffffff79;
+  color: #75D390;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.d1d1{
+  margin-top: 120px;
+  box-shadow: 0px 1px 10px 5px #75D390;
+}
