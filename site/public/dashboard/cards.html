@@ -218,43 +218,20 @@
             muito_frio: 9
         };
 
-        var classe_temperatura = 'cor-alerta';
-
         if (temperatura >= limites.muito_quente) {
-            cor_alerta.style.backgroundcolor = "red";
-            console.log("caiu no 1")
+            alert('A temperatura está MUITO ACIMA para seu armazém')
         }
-        else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
-            cor_alerta.style.backgroundcolor = "yellow";
-            console.log("caiu no 2")
+        else if (temperatura >= limites.quente) {
+            alert('A temperatura está UM POUCO ACIMA do ideal para seu armazém')
         }
-        else if (temperatura < limites.quente && temperatura > limites.frio) {
-            cor_alerta.style.backgroundcolor = "green";
-            console.log("caiu no 3")
+        else if (temperatura == limites.ideal) {
+            alert('A temperatura está PERFEITA para seu armazém')
         }
-        else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
-            cor_alerta.style.backgroundcolor = "yellow";
-            console.log("caiu no 4")
+        else if (temperatura <= limites.frio) {
+            alert('A temperatura está UM POUCO ABAIXO do ideal para seu armazém')
         }
-        else if (temperatura < limites.min_temperatura) {
-            cor_alerta.style.backgroundcolor = "red";
-            console.log("caiu no 5")
-        }
-
-        var card;
-
-        if (idArmazem == 1) {
-            temp_aquario_1_maxima.innerHTML = temperatura + "°C";
-            card = card_1
-        } else if (idArmazem == 2) {
-            temp_aquario_2.innerHTML = temperatura + "°C";
-            card = card_2
-        } else if (idArmazem == 3) {
-            temp_aquario_3.innerHTML = temperatura + "°C";
-            card = card_3
-        } else if (idArmazem == 4) {
-            temp_aquario_4.innerHTML = temperatura + "°C";
-            card = card_4
+        else if (temperatura <= limites.muito_frio) {
+            alert('A temperatura está MUITO ABAIXO do ideal para seu armazém')
         }
 
     }
