@@ -138,7 +138,55 @@ body {
 .header2 {
   border-bottom: 3px solid #303238;
 }
-footer{
+
+footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 2.5% 5% 2.5% 0%;
+}
+
+footer .contato {
+  width: 80%;
+  display: flex;
+  padding: 0 10%;
+}
+
+footer .contato .c {
+  display: flex;
+  width: 40%;
+  margin-right: 4%;
+  margin-left: 12%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .contato .circle {
+  margin-left: 16%;
+  margin-right: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .contatos .endereco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .img {
+  font-size: 10px;
+  width: 60%;
+  padding: 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+/* footer{
+  width: 100%;
   padding: 30px 0;
   background-color: white;
 }
@@ -159,15 +207,15 @@ footer .contato {
   justify-content: center;
 }
 
-footer .img {
-  font-size: 10px;
-  width: 60%;
-  padding: 0 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 70px;
+footer .c{
+  margin-left: 8px;
+  width: 90px;
+  color: #303238;
+  width: 100px;
+  font-size: 15px;
 }
+
+
 
 footer .input {
   padding-right: 15px;
@@ -189,19 +237,6 @@ footer .b{
   font-size: 15px;
 }
 
-footer .c{
-  margin-left: 8px;
-  width: 90px;
-  color: #303238;
-  width: 100px;
-  font-size: 15px;
-}
-
-#in_newsletter {
-  margin-top: 134px;
-  border-radius: 9px;
-}
-
 footer .redes{
   width: 30%;
   display: flex;
@@ -211,15 +246,10 @@ footer .redes{
 }
 
 footer .imagens{
-
   margin-left: 370px;
   color: #303238;
   font-size: 15px;
-}
-
-footer img {
-  width: 10%;
-}
+} */
 
 /* .footer {
   background-color: #303238;
