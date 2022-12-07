@@ -224,6 +224,35 @@ function cadastrar(req, res) {
     }
 }
 
+function orcamento(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
+    var idUsuario = req.body.idUsuarioServer
+    var sensorVar = req.body.sensorServer
+ 
+    if (idUsuario == undefined && sensorVar == undefined) {
+        res.status(400).send("Seu campo está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.orcamento(idUsuario, sensorVar)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
@@ -235,4 +264,5 @@ module.exports = {
     minimaUmidade,
     percentualIdeal,
     percentualIdealUmid,
+    orcamento
 }

@@ -44,4 +44,9 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/orcamento", function (req, res) {
+    usuarioController.orcamento(req, res);
+})
+
+
 module.exports = router;

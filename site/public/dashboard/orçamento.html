@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/logo-soja.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SojaTech | Tempo Real</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="dashboards.css">
+
+    <script src="../js/funcoes.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="janela">
+
+
+        <div class="header-left dash-header">
+
+            <h1>SojaTech</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav">
+                <h3>Silos</h3>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./dashboard.html">
+                    <h3>Gráficos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./mural.html">
+                    <h3>Mural de Avisos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./orçamento.html">
+                    <h3>Orçamentos</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="https://sojatech.tomticket.com?account=3838976P06122022114103" target="_blank">
+                    <h3>Preciso de Ajuda</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="dash">
+            <h1 class="titulo-regua">Temperatura</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h4>Selecione a quantidade de sensores</h4>
+                <select name="" id="sel_sensor">
+                    <option value="">--Escolha--</option>
+                    <option value="1">1 Sensor</option>
+                    <option value="2">2 Sensores</option>
+                    <option value="3">3+ A combinar</option>
+                </select>
+                <br>
+                <button onclick="orcamento()">Salvar o Orçamento</button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+    b_usuario.innerHTML = sessionStorage.getItem('NOME_USUARIO')
+
+    function orcamento(){
+        // aguardar();
+        var idUsuario = sessionStorage.getItem('ID_USUARIO')
+        var sensor = Number(sel_sensor.value)
+        // var notaServer = Number(in_p1.value)
+        // var notaVar = notaServer
+
+            if (sensor == "") {
+                alert('Preencha todos os campos corretamente')
+
+                //finalizarAguardar();
+                return false;
+            } 
+            // else if(notaServer > 100){
+            //     alert('A PONTUAÇÃO DEVE SER MENOR QUE 100!')
+            //     return false;
+            else {
+                alert('Nota Cadastrada com sucesso!')
+            //     setInterval(sumirMensagem, 5000)
+            }
+        
+        
+
+        // Enviando o valor da nova input
+        fetch("../usuarios/orcamento", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+            // notaServer : notaVar,
+            idUsuarioServer : idUsuario,
+            sensorServer : sensor
+            
+            })
+        }).then(function (resposta) {
+
+            // console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Registro realizado com sucesso!";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+                
+                limparFormulario();
+                // finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>

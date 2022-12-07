@@ -84,6 +84,16 @@ function cadastrar(nome, email, senha, cpf, telefone1, telefone2, logradouro, nu
     return database.executar(instrucao);
 }
 
+function orcamento(idUsuario, sensorVar) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", idUsuario, sensorVar);
+    
+    var instrucao = `
+        INSERT INTO clienteOrcamento (fkCliente, fkOrcamentoO) VALUES (${idUsuario}, ${(sensorVar)});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
@@ -94,4 +104,5 @@ module.exports = {
     minimaUmidade,
     percentualIdeal,
     percentualIdealUmid,
+    orcamento
 };
